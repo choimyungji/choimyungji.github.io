@@ -1,17 +1,17 @@
 # Site settings
-title: 기계인간 John Grib
-url: "https://johngrib.github.io"
+title: 개발자 최명지
+url: "https://choimyungji.github.io"
 baseurl: ""
 description: >
-    기계인간 블로그
+    개발자 최명지의 위키입니다.
 
 # My information
-email: johngrib82@gmail.com
-author: 기계인간 John Grib
-profile: 유물론자
-twitter_username: John_Grib
-github_username: johngrib
-comment-support: utterances
+email: choimyungji@gmail.com
+author: 최명지
+profile: ㅇㅇ 
+twitter_username: maeng4u 
+github_username: choimyungji 
+# comment-support: utterances
 
 # Build settings
 plugins:
@@ -49,12 +49,12 @@ utterances:
 google_analytics:
   ua: UA-110224147-1
 
-google_adsense:
-  client: ca-pub-3675948545737694
+# google_adsense:
+#   client: ca-pub-3675948545737694
 
-blame: "https://github.com/johngrib/johngrib.github.io/blame/master/_wiki"
-edit: "https://github.com/johngrib/johngrib.github.io/edit/master/_wiki"
-issue: "https://github.com/johngrib/johngrib.github.io/issues/new"
+blame: "https://github.com/choimyungji/choimyungji.github.io/blame/master/_wiki"
+edit: "https://github.com/choimyungji/choimyungji.github.io/edit/master/_wiki"
+issue: "https://github.com/choimyungji/choimyungji.github.io/issues/new"
 
 timezone: "Asia/Seoul"
 
