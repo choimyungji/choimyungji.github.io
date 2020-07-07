@@ -27,7 +27,8 @@ table.gsc-search-box {
 }
 
 .header {
-    background-color: $theme-color;
+ font-family: 'Noto Sans KR', sans-serif ;
+    background-color: transparent;
 
     &:after {
         clear: both;
@@ -36,20 +37,20 @@ table.gsc-search-box {
     }
 
     .site-title {
+        font-size: 1.77778rem;
         float: left;
         text-decoration: none;
-        color: #FFFFFF;
+        color: #000000cc;
         line-height: 1.3;
         padding-left: 10px;
-        font-style: italic;
+        font-weight: 800;
     }
     .site-title-right {
         float: right;
         text-decoration: none;
-        color: #FFFFFF;
+        color: #000000cc;
         line-height: 1.3;
         padding-right: 10px;
-        font-style: italic;
     }
 }
 

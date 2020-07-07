@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,800,900&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,800,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:200,300,800&display=swap');
 
 body {
     margin: 0;
@@ -7,7 +8,7 @@ body {
 }
 
 body {
-  font: 400 16px 'Roboto Slab',AppleSDGothicNeo,sans-serif;
+  font: 400 16px;
   color: rgba(0, 0, 0, 0.84);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
@@ -37,6 +38,7 @@ a:visited {
 }
 
 .post-content {
+  font: 400 16px 'Noto Serif KR';
     line-height: 2;
 }
 
@@ -89,6 +91,7 @@ pre code {
 }
 
 h1 {
+ font-family: 'Noto Sans KR', sans-serif ;
     font-weight: normal;
 }
 h2,h3,h4,h5,h6 {
