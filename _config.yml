@@ -18,7 +18,7 @@ plugins:
   - jekyll-paginate
   - jekyll-gist
 
-permalink: /blog/:year/:month/:day/:title/
+permalink: /:title/
 
 markdown: kramdown
 highlighter: rouge
@@ -37,17 +37,17 @@ collections:
         permalink: /:collection/:path/
 
 # Comment Service
-disqus:
-  id: johngrib
-  shortname: johngrib
-utterances:
-  repo: johngrib/johngrib.github.io
-  issue-term: pathname
-  label: Comment
-  branch: master
+# disqus:
+#   id: johngrib
+#   shortname: johngrib
+# utterances:
+#   repo: johngrib/johngrib.github.io
+#   issue-term: pathname
+#   label: Comment
+#   branch: master
 
 google_analytics:
-  ua: UA-110224147-1
+  ua: UA-125415151-1
 
 # google_adsense:
 #   client: ca-pub-3675948545737694
