@@ -25,7 +25,7 @@ categories: reactnative
 > npx react-native run-android
 ```
 
-![실행화면](./react-native-run.png)
+![실행화면](../img/2020-03-10-start-react-native-app/react-native-run.png)
 ## 구조
 ```
 /android
