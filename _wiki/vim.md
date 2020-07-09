@@ -1,8 +1,11 @@
 ---
-layout: post
+layout: wiki
 title: VIM 
 date: 2017-11-15 23:00:00 +0900
+updated: 2017-11-15 23:00:00 +0900
 categories: macux
+parent  : [[how-to]]
+public  : true
 tags : vim
 ---
 
