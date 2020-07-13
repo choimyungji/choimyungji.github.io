@@ -9,7 +9,7 @@ regenerate: true
 
 ## wiki items
 
-* [[mathjax-latex]]
+* [[google-search-engine]]
 
 ---
 
