@@ -1,15 +1,16 @@
 ---
 layout: wiki
-title: VIM 
+title: VIM 명령 정리 
 date: 2017-11-15 23:00:00 +0900
 updated: 2017-11-15 23:00:00 +0900
 categories: macux
 parent  : [[how-to]]
 public  : true
+toc : true
 tags : vim
 ---
-
-# VIM 명령 정리
+* TOC
+{:toc}
 
 ## 기본명령
 ### 1. 저장 / 종료
