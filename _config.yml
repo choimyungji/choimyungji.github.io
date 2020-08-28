@@ -27,8 +27,8 @@ kramdown:
   syntax_highlighter: rouge
 
 paginate: 10
-paginator_path: "/blog"
-paginate_path: "/blog/page:num/"
+paginator_path: "/_posts"
+paginate_path: "/_posts/page:num/"
 
 # Collections
 collections:
