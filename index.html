@@ -40,9 +40,9 @@ regenerate: true
 	  <div class="post">
 	  	<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{%if post.header %}{{ post.header }}{% else %}{{ post.title }}{% endif %}</a></h2>
       <div class="by-line parent">
-        <time datetime="{{ post.date | date_to_xmlschema }}"> <i>{{ post.date | date_to_string }}</i> </time>
+        <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }} </time>
         &nbsp;&nbsp; &middot; &nbsp;&nbsp;
-        <span><i>{{ post.duration }}</i> </span>
+        <span>{{ post.duration }} </span>
       </div>
       <p>{{ post.content | strip_html | truncatewords:50 }}</p>
 	  </div>
