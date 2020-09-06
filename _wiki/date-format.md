@@ -40,3 +40,6 @@ tags : date, time, datetime
 
 ### 오전/오후
 `a` AM/PM 표기. 로케일 설정을 `ko`로 하면 한글로 오전/오후로 표기한다.
+
+### GMT
+`XXXX` GMT 기준 한국 위치를 +0900으로 표기한다.
