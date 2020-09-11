@@ -21,4 +21,11 @@ WHERE 필드이름=데이터값
 ```
 
 
-
+## JOIN
+### INNER JOIN
+```
+SELECT 컬럼1, 컬럼2, ...
+FROM 테이블1 t1
+INNER JOIN 테이블2 t2
+ON t1.컬럼명 = t2.컬럼명;
+```
