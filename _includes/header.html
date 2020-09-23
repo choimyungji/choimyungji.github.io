@@ -37,36 +37,30 @@
         gtag('config', '{{ site.google_analytics.ua }}');
     </script>
 {% endif %}
-{% if site.google_adsense.client and page.adsense == true %}
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "{{ site.google_adsense.client }}",
-        enable_page_level_ads: true
-      });
-    </script>
-{% endif %}
 
 </head>
 <header class="header">
     <div>
+            <div>
         <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
     </div>
-    <div>
-        <a class="site-title-right" href="/about/">me</a>
+    <div class="site-title-right">
+        <form role="search" method="get" action="/search/">
+            <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+            <input type="submit" class="searchButton" value="Search">
+        </form>
     </div>
     <div>
-        <a id="random-button" class="site-title-right" href="/wiki/index/#random" onClick="if(typeof random === 'function')random()">random</a>
+        <a class="site-title-right" href="/about/">Me</a>
     </div>
     <div>
-        <a class="site-title-right" href="/wiki/index/">wiki</a>
+        <a id="random-button" class="site-title-right" href="/wiki/index/#random" onClick="if(typeof random === 'function')random()">Random</a>
     </div>
-<div class="site-title-right">
-    <form role="search" method="get" action="/search/">
-         <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
-         <input type="submit" class="searchButton" value="Search">
-    </form>
+    <div>
+        <a class="site-title-right" href="/wiki/index/">Wiki</a>
+    </div>
 </div>
+
 </header>
 <script>
 ;(function(){
