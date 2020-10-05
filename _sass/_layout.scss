@@ -26,13 +26,11 @@ table.gsc-search-box {
 }
 
 .header {
- font-family: 'Noto Sans KR', sans-serif ;
+    font-family: 'Noto Sans KR', sans-serif ;
     background-color: transparent;
 
-    &:after {
-        clear: both;
-        content: ' ';
-        display: block;
+    .site-right-div {
+        vertical-align: bottom;
     }
 
     .site-title {
@@ -43,12 +41,20 @@ table.gsc-search-box {
         line-height: 1.3;
         font-weight: 600;
     }
-    .site-title-right {
+    .site-right-menu {
         float: right;
         text-decoration: none;
         color: #000000cc;
         line-height: 1.3;
         padding-right: 10px;
+    }
+    .searchButton {
+        float: right;
+        text-decoration: none;
+        color: #000000cc;
+        line-height: 1.3;
+        border:none;
+        background-color: transparent;
     }
 }
 

@@ -6,9 +6,10 @@
 
     <meta name="description" content="{{ page.summary }}">
 
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
+        href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}" />
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ page.title }}">
@@ -26,59 +27,61 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
-{% if site.google_analytics.ua %}
+    {% if site.google_analytics.ua %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics.ua }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', '{{ site.google_analytics.ua }}');
     </script>
-{% endif %}
+    {% endif %}
 
 </head>
 <header class="header">
-    <div>
-            <div>
-        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-    </div>
-    <div class="site-title-right">
-        <form role="search" method="get" action="/search/">
-            <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
-            <input type="submit" class="searchButton" value="Search">
-        </form>
-    </div>
-    <div>
-        <a class="site-title-right" href="/about/">Me</a>
-    </div>
-    <div>
-        <a id="random-button" class="site-title-right" href="/wiki/index/#random" onClick="if(typeof random === 'function')random()">Random</a>
-    </div>
-    <div>
-        <a class="site-title-right" href="/wiki/index/">Wiki</a>
-    </div>
-</div>
-
+    <!-- <div> -->
+        <div class="site-title">
+            <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+        </div>
+        <div class="site-right-div">
+            <form id='header-search' class="site-right-menu" role="search" method="get" action="/search/">
+                <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+                <!-- <input type="submit" class="searchButton" value="Search"> -->
+                <a href="javascript:{}" onClick="document.getElementById('header-search').submit();">Search</a>
+            </form>
+        <div class="site-right-menu" >
+            <!-- <a class="site-right-menu" href="/about/">Me</a> -->
+            <a href="/about/">Me</a>
+        </div>
+        <div class="site-right-menu" >
+            <a id="random-button" href="/wiki/index/#random"
+                onClick="if(typeof random === 'function')random()">Random</a>
+        </div>
+        <div class="site-right-menu" >
+            <a href="/wiki/index/">Wiki</a>
+        </div>
+        </div>
+    <!-- </div> -->
 </header>
 <script>
-;(function(){
-    var isCtrl = false;
+    ; (function () {
+        var isCtrl = false;
 
-    document.onkeyup=function(e){
-        if (e.which == 17) {
-            isCtrl = false;
+        document.onkeyup = function (e) {
+            if (e.which == 17) {
+                isCtrl = false;
+            }
         }
-    }
 
-    document.onkeydown=function(e){
-        if(e.which == 17) {
-            isCtrl = true;
+        document.onkeydown = function (e) {
+            if (e.which == 17) {
+                isCtrl = true;
+            }
+            if (e.which == 82 && isCtrl == true) {
+                document.getElementById("random-button").click();
+            }
         }
-        if(e.which == 82 && isCtrl == true) {
-            document.getElementById("random-button").click();
-        }
-    }
-})();
+    })();
 </script>
