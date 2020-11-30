@@ -1,10 +1,17 @@
 ---
-layout: post
-title: GIT 명령어 정리
-date:   2017-11-14 22:13:58 +0900
-categories: macux
+layout: wiki
+title: Git Command
+date: 2020-11-24 20:33:50 +0900
+updated: 2020-11-24 20:34:05 +0900
+categories: tool
+parent  : [[how-to]]
+public  : true
+toc : true
 tags : git init clone add commit push pull
 ---
+* TOC
+{:toc}
+
 
 ## init
 git 리파지토리를 시작함
@@ -45,6 +52,10 @@ git push
 git pull
 ```
 
+## checkout
+브랜치를 이동할때나 워킹트리의 파일을 되돌린다.
+git version 2.23 이후로 그 의미를 명확하게 하기 위해 `switch`, `restore`로 나누어 졌다.
+
 ## remote
 원격저장소의 주소를 가져온다.
 ```
@@ -77,4 +88,10 @@ git config --global user.name "Myungji Choi"
 파인더에서 파일을 끌어 옮기거나, sh에서 그냥 mv를 할 경우, 이전의 파일은 delete로, 변경된 파일은 add가 되어, 이력관리가 되지 않는다.
 ```
 git mv previous.md next.md
+```
+
+## 되돌리기
+stage에 올라가지 않은 수정사항들을 삭제할때
+```
+git restore .
 ```
