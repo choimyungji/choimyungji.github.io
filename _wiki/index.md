@@ -9,14 +9,15 @@ regenerate: true
 
 ## wiki items
 
-* [[google-search-engine]]
+* [[develop]]
+* [[how-to]]
 
 ---
 
 ## blog posts
 <div>
     <ul>
-{% for post in site.posts %}
+{% for post in site.posts limit:10 %}
     {% if post.public != false %}
         <li>
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
