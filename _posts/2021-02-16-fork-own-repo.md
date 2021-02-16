@@ -24,5 +24,7 @@ tags : private, blog, fork, merge
 4. Upstream의 master 브랜치를 pull 한다.
 5. Origin의 master 브랜치로 push 한다.
 
-이제 private 블로그를 로컬에서 메인으로 사용하고 공개할 코드만 공개 리포지토리로 머지해서 사용해보자.
+엄밀히는 포크는 아니고, 공개 리포지토리를 추가 remote 브랜치로 사용하는 개념인 것 같다.
+
+이제 private 블로그를 로컬에서 메인으로 사용하고 공개할 코드만 공개 리포지토리로 푸시해서 사용해보자.
 
