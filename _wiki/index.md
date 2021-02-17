@@ -11,6 +11,7 @@ regenerate: true
 
 * [[develop]]
 * [[how-to]]
+* [[etc]]
 
 ---
 
