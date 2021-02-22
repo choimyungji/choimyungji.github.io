@@ -19,6 +19,12 @@ UIKit의 UILabel과 같은 모양을 구성할때 사용하는 뷰
 Text("문자열내용")
 ```
 
+#### 여백
+```
+Text("문자열내용")
+  .padding()
+```
+
 ### Spacer
 뷰와 뷰사이의 공간을 만들어 줄때 사용한다.
 ![Spacer](../../img/swiftui-view/spacer.png)
