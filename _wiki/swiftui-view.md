@@ -25,6 +25,12 @@ Text("문자열내용")
   .padding()
 ```
 
+### 줄간격
+```
+Text("문자열내용")
+  .lineSpacing(50)
+```
+
 ### Spacer
 뷰와 뷰사이의 공간을 만들어 줄때 사용한다.
 ![Spacer](../../img/swiftui-view/spacer.png)
