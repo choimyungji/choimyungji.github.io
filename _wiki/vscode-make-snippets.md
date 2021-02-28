@@ -1,10 +1,15 @@
 ---
-layout: post
-title: vs code 사용 팁
-date: 2020-05-13 17:00:00 +0900
-categories: tool 
+layout: category
+title: vs code 스니펫 만들기
+date: 2021-02-28 23:22:28 +0900
+updated: 2021-02-28 23:22:28 +0900
+tags : vscode, tip, snippet 
+toc: true
+public: true
+parent: [[tool]]
 ---
-
+* TOC
+{:toc}
 ## 스니펫 작성
 
 ```
