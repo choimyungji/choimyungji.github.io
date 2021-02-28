@@ -3,79 +3,51 @@ layout: home
 adsense: false
 regenerate: true
 ---
-
-<!-- <div class="blog-face">
-    <div>
-        <H3>
-            <a href="https://github.com/vimwiki/vimwiki">Vimwiki</a>
-            +
-            <a href="https://jekyllrb.com/">Jekyll</a>
-            +
-            <a href="https://pages.github.com/">Github.io</a>
-        </H3>
-    </div>
-        기억 보조용 위키
-    <div>
-    </div>
-    <div>
-        <a href="/blog/">블로그</a>
-        /
-        <a href="/tag/">태그</a>
-    </div>
-    <div class="contact">
-{% if site.github_username %}
-        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
-{% endif %}
-{% if site.twitter_username %}
-        <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
-{% endif %}
-{% if site.email %}
-        <a href="mailto:{{ site.email }}">Email</a>
-{% endif %}
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
-    </div>
-</div> -->
 <div id="posts">
-	{% for post in paginator.posts %}
-	  <div class="post">
-	  	<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{%if post.header %}{{ post.header }}{% else %}{{ post.title }}{% endif %}</a></h2>
-      <div class="by-line parent">
-        <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }} </time>
-        &nbsp;&nbsp; &middot; &nbsp;&nbsp;
-        <span>{{ post.duration }} </span>
-      </div>
-      <p>{{ post.content | strip_html | truncatewords:50 }}</p>
-	  </div>
-    {% endfor %}
+  <H2>Blog</H2>
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h2><a href="{% if site.baseurl == " /" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif
+        %}">{%if post.header %}{{ post.header }}{% else %}{{ post.title }}{% endif %}</a></h2>
+    <div class="by-line parent">
+      <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }} </time>
+      &nbsp;&nbsp;
+      <span>{{ post.duration }} </span>
+    </div>
+    <p>{{ post.content | strip_html | truncatewords:50 }}</p>
+  </div>
+  {% endfor %}
 </div>
+
 <div>
-    <H3 class="indent">최근 변경된 문서</H3>
-    <ul class="post-list">
-{% assign documents = site.wiki | sort: 'updated' | reverse %}
-{% for doc in documents limit: 30 %}
+  <H2>Wiki</H2>
+  <H3>최근 변경된 문서</H3>
+  <ul class="post-list">
+    {% assign documents = site.wiki | sort: 'updated' | reverse %}
+    {% for doc in documents limit: 30 %}
     {% if doc.public == true and doc.title != 'wiki'%}
-        <li>
-            <div>
-                <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
-                    <div class="post-meta">
-                        {{ doc.updated | date: "%Y.%m.%d" }}
-                        -
-                        {{ doc.title }}
-                    </div>
-                    <div class="post-excerpt">{{ doc.summary }}</div>
-                    <ul class="tag-list">
-                        <li class="post-tag">
-                            {{ doc. tag }}
-                        </li>
-                    </ul>
-                </a>
-            </div>
-        </li>
+    <li>
+      <div>
+        <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
+          <div class="post-meta">
+            {{ doc.updated | date: "%Y.%m.%d" }}
+            -
+            {{ doc.title }}
+          </div>
+          <div class="post-excerpt">{{ doc.summary }}</div>
+          <ul class="tag-list">
+            <li class="post-tag">
+              {{ doc. tag }}
+            </li>
+          </ul>
+        </a>
+      </div>
+    </li>
     {% endif %}
-{% endfor %}
-    </ul>
-    <h4>
-        <a href="/recent/">전체 문서 리스트 보기 ({{ site.wiki | size | minus: 1 }} 항목)</a>
-    </h4>
+    {% endfor %}
+  </ul>
+  <h4>
+    <a href="/recent/">전체 문서 리스트 보기 ({{ site.wiki | size | minus: 1 }} 항목)</a>
+  </h4>
 </div>
 {% include createLink.html %}

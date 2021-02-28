@@ -98,6 +98,7 @@ pre code {
 h1,h2,h3 {
  font-family: 'Noto Sans KR', sans-serif ;
     font-weight: 700;
+    margin: 0;
 }
 
 h4,h5,h6 {
@@ -111,14 +112,13 @@ h4,h5,h6 {
 
 h1 {
     font-size: 2.2rem;
-    margin: 0px;
 }
 .post-content h1 {
     border-bottom: 1px solid $theme-color;
 }
 h2 {
-    font-size: 1.2rem;
-    margin-bottom: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 .post-content h2 {
     font-size: 1.4rem;
