@@ -153,8 +153,8 @@ ul.tag-list {
 }
 
 .title-summary {
-    font-size: 1.1em;
-    color: gray;
+    font-size: 1.0em;
+    color: #333333;
 }
 
 .visible {
@@ -222,5 +222,14 @@ div.search {
 }
 
 .post-excerpt {
+    font-size: 0.9em;
     color: $forth-font-color;
+}
+
+.by-line {
+    display: block;
+    color: #404040;
+    line-height: 1.8em;
+    margin-bottom: 1.5em;
+    font-weight: 400;
 }
