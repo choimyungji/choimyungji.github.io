@@ -26,10 +26,18 @@ body, th, td, div, p, li {
     word-break: keep-all;
 }
 
-
-p, li {
+p {
     color: $main-font-color;
     font-family: 'Noto Serif KR', serif;
+    font-weight: 400;
+    padding-bottom: 2rem;
+}
+
+li {
+    color: $main-font-color;
+    font-family: 'Noto Sans KR', sans-serif ;
+    font-weight: 400;
+    padding-bottom: 0.2rem;
 }
 
 /*- Link -*/
