@@ -40,7 +40,7 @@
     {% endif %}
 
 </head>
-<header class="header">
+<header class="header" id="nav">
     <!-- <div> -->
         <div class="site-title">
             <a href="{{ site.baseurl }}/">{{ site.title }}</a>
@@ -64,6 +64,9 @@
         </div>
         </div>
     <!-- </div> -->
+    <a id="nav-menu">
+        <div id="menu"></div>
+    </a>
 </header>
 <script>
     ; (function () {
@@ -85,3 +88,4 @@
         }
     })();
 </script>
+<script src="/js/main.js"></script>
