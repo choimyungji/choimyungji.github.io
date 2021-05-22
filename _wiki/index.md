@@ -10,6 +10,7 @@ regenerate: true
 ## wiki items
 
 * [[develop]]
+* [[life]]
 * [[how-to]]
 * [[etc]]
 
