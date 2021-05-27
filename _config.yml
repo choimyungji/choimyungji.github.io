@@ -35,6 +35,9 @@ collections:
     wiki:
         output: true
         permalink: /:collection/:path/
+    thoughts:
+        output: true
+        permalink: /:collection/:path/
 
 # Comment Service
 # disqus:
