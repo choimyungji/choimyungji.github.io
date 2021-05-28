@@ -1,5 +1,5 @@
 ---
-layout: thougt
+layout: thought
 date: 2021-02-21 19:31:44 +0900
 ---
 
