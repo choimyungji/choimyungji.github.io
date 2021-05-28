@@ -37,6 +37,9 @@ table.gsc-search-box {
         position: absolute;
         right: 0;
         bottom: 0;
+        @media (max-width: 800px) {
+            display:none;
+          }
     }
 
     .site-title {

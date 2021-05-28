@@ -41,27 +41,27 @@
 
 </head>
 <header class="header" id="nav">
-        <div class="site-title">
-            <a href="{{ site.baseurl }}/">{{ site.title }}</a>
-        </div>
-        <div class="site-right-div">
-            <form id='header-search' class="site-right-menu" role="search" method="get" action="/search/">
-                <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
-                <!-- <input type="submit" class="searchButton" value="Search"> -->
-                <a href="javascript:{}" onClick="document.getElementById('header-search').submit();">Search</a>
-            </form>
-        <div class="site-right-menu" >
+    <div class="site-title">
+        <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+    </div>
+    <div class="site-right-div">
+        <form id='header-search' class="site-right-menu" role="search" method="get" action="/search/">
+            <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+            <!-- <input type="submit" class="searchButton" value="Search"> -->
+            <a href="javascript:{}" onClick="document.getElementById('header-search').submit();">Search</a>
+        </form>
+        <div class="site-right-menu">
             <!-- <a class="site-right-menu" href="/about/">Me</a> -->
             <a href="/about/">Me</a>
         </div>
-        <div class="site-right-menu" >
+        <div class="site-right-menu">
             <a id="random-button" href="/wiki/index/#random"
                 onClick="if(typeof random === 'function')random()">Random</a>
         </div>
-        <div class="site-right-menu" >
+        <div class="site-right-menu">
             <a href="/wiki/index/">Wiki</a>
         </div>
-        </div>
+    </div>
 </header>
 <script>
     ; (function () {
