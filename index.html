@@ -22,22 +22,6 @@ regenerate: true
     {% endfor %}
   </ul>
 </div>
-<!-- <div id="posts">
-  <H2>Blog</H2>
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h2><a href="{% if site.baseurl == " /" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif
-        %}">{%if post.header %}{{ post.header }}{% else %}{{ post.title }}{% endif %}</a></h2>
-    <div class="by-line parent">
-      <time datetime="{{ post.date | date_to_xmlschema }}"> {{ post.date | date_to_string }} </time>
-      &nbsp;&nbsp;
-      <span>{{ post.duration }} </span>
-    </div>
-    <p>{{ post.content | strip_html | truncatewords:50 }}</p>
-  </div>
-  {% endfor %}
-</div> -->
-
 <div>
   <H2>Wiki</H2>
   <H3>최근 변경된 문서</H3>
