@@ -13,7 +13,7 @@ function toggle() {
 	  var site = document.getElementById("wrap");
 	  
 	  if (nav.className == "menu-open" || nav.className == "menu-open-left") {
-	  	  nav.className = "";
+	  	  nav.className -= " menu-open";
 	  	  button.className = "";
 	  	  site.className = "";
 	//   } else if (reverse !== null) {
@@ -21,7 +21,7 @@ function toggle() {
 	//   	  button.className += "btn-close";
 	//   	  site.className += "fixed";
 	  } else {
-	  	  nav.className += "menu-open";
+	  	  nav.className += " menu-open";
 	  	  button.className += "btn-close";
 	  	  site.className += "fixed";
 	    }

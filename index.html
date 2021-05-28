@@ -3,7 +3,26 @@ layout: home
 adsense: false
 regenerate: true
 ---
-<div id="posts">
+<div>
+  <H2>생각</H2>
+  <ul class="post-list">
+    {% assign documents = site.thoughts| sort: 'date' | reverse %}
+    {% for doc in documents limit: 30 %}
+    <li>
+      <div>
+        <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
+          <div class="post-meta">
+            {{ doc.date | date: "%Y.%m.%d" }}
+            {{ doc.content }}
+          </div>
+          <div class="post-excerpt">{{ doc.summary }}</div>
+        </a>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+<!-- <div id="posts">
   <H2>Blog</H2>
   {% for post in paginator.posts %}
   <div class="post">
@@ -17,7 +36,7 @@ regenerate: true
     <p>{{ post.content | strip_html | truncatewords:50 }}</p>
   </div>
   {% endfor %}
-</div>
+</div> -->
 
 <div>
   <H2>Wiki</H2>
