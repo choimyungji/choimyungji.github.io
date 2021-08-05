@@ -4,17 +4,21 @@ adsense: false
 regenerate: true
 ---
 <div>
-  <H2>생각</H2>
+  <!-- <H2>생각</H2> -->
   <ul class="post-list">
-    {% assign documents = site.thoughts| sort: 'date' | reverse %}
+    {% assign documents = site.posts | sort: 'date' | reverse %}
     {% for doc in documents limit: 30 %}
     <li>
       <div>
         <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
           <div class="post-meta">
+            {% if doc.layout != 'thought' %}
+          {{ doc.title }}
+          {% endif %}
             {{ doc.date | date: "%Y.%m.%d" }}
-            {{ doc.content }}
           </div>
+            <!-- <p>{{ doc.content}}</p> -->
+            <p>{{ doc.content | strip_html | truncatewords:50 }}</p>
           <div class="post-excerpt">{{ doc.summary }}</div>
         </a>
       </div>

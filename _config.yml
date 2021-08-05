@@ -38,6 +38,9 @@ collections:
     thoughts:
         output: true
         permalink: /:collection/:path/
+    posts:
+        output: true
+        permalink: /:collection/:path/
 
 # Comment Service
 # disqus:
