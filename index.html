@@ -11,10 +11,13 @@ regenerate: true
     <li>
       <div>
         <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
-          <div class="post-meta">
+          <h3>
             {% if doc.layout != 'thought' %}
-          {{ doc.title }}
-          {% endif %}
+            {{ doc.title }}
+            {% endif %}
+          </h3>
+          <div class="post-meta">
+            
             {{ doc.date | date: "%Y.%m.%d" }}
           </div>
             <!-- <p>{{ doc.content}}</p> -->
@@ -23,6 +26,7 @@ regenerate: true
         </a>
       </div>
     </li>
+    <hr/>
     {% endfor %}
   </ul>
 </div>
