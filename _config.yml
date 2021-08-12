@@ -10,8 +10,8 @@ email: choimyungji@gmail.com
 author: 최명지
 profile: ㅇㅇ 
 twitter_username: maeng4u 
-github_username: choimyungji 
-# comment-support: utterances
+github_username: choimyungji
+comment-support: utterances
 
 # Build settings
 plugins:
@@ -44,13 +44,13 @@ collections:
 
 # Comment Service
 # disqus:
-#   id: choimyungji 
-#   shortname: choimyungji 
-# utterances:
-#   repo: choimyungji/choimyungji.github.io
-#   issue-term: pathname
-#   label: Comment
-#   branch: master
+#   id: myungji 
+#   shortname: myungji 
+utterances:
+  repo: choimyungji/utterance
+  issue-term: pathname
+  label: Comment
+  # branch: master
 
 google_analytics:
   ua: UA-125415151-1
