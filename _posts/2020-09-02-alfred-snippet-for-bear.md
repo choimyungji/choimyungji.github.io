@@ -14,9 +14,9 @@ tags : bear, alfred, snippet, tip
 #3.생활/여행
 ```
 등의 태그를 달면
-왼쪽 태그영역에 아래 그림과 같이 계층구조로 표현된다.title
+왼쪽 태그영역에 아래 그림과 같이 계층구조로 표현된다.
 
-![Bear앱화면](../img/2020-09-02-alfred-snippet-for-bear/bear-app-hashtag.png)
+![Bear앱화면](/img/2020-09-02-alfred-snippet-for-bear/bear-app-hashtag.png)
 
 ### 날짜별로 활용하기
 모든 노트에 날짜를 다음과 같이 기록해보자.
@@ -25,13 +25,13 @@ tags : bear, alfred, snippet, tip
 ```
 그러면 모든 기록물이 날짜별로 차곡차곡 쌓이는데다가, 년도별, 월별 카테고리화까지 가능하다.
 
-![Bear앱화면](../img/2020-09-02-alfred-snippet-for-bear/bear-app-date-hashtag.png)
+![Bear앱화면](/img/2020-09-02-alfred-snippet-for-bear/bear-app-date-hashtag.png)
 
 ### 스니펫 작성
 이를 모든 노트에 직접 입력하는 것은 귀찮은 일이다.
 알프레드앱의 스니펫 기능을 이용해보자.
 
-![Bear앱화면](../img/2020-09-02-alfred-snippet-for-bear/alfred-app-snippet.png)
+![Bear앱화면](/img/2020-09-02-alfred-snippet-for-bear/alfred-app-snippet.png)
 스니펫은 일반문자열 스니펫과 속성문자열 스니펫을 선택할 수 있는데, 
 일반문자열로 선택하면 된다.
 
