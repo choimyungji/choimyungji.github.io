@@ -6,7 +6,7 @@ updated: 2021-08-24 00:40:45 +0900
 tags : ios, rn, reactnative
 toc: true
 public: true
-parent: [[develop]]
+parent: [[react-native]]
 ---
 * TOC
 {:toc}
