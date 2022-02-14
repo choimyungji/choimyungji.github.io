@@ -37,9 +37,6 @@ table.gsc-search-box {
         position: absolute;
         right: 0;
         bottom: 0;
-        @media (max-width: 800px) {
-            display:none;
-          }
     }
 
     .site-title {
@@ -50,16 +47,17 @@ table.gsc-search-box {
         line-height: 1.3;
         font-weight: 600;
     }
-
+    #header-search {
+               @media (max-width: 800px) {
+            display:none;
+          } 
+    }
     #nav-menu {
         vertical-align: bottom;
         display: inline-block;
         position: absolute;
         right: 0;
         bottom: 0;  
-        @media (min-width: 940px) {
-            display:none;
-          }
     }
     .site-right-menu {
         float: right;
@@ -76,6 +74,14 @@ table.gsc-search-box {
         line-height: 1.3;
         border:none;
         background-color: transparent;
+    }
+    #random-icon {
+        width: 12px;
+        height: 12px;
+    }
+    #random-button {
+        display: inline;
+
     }
 }
 
