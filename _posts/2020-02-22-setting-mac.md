@@ -8,6 +8,14 @@ categories: setting
 설치할 것도 많고, 설정할 것도 많다. 이번에 좀 정리를 해두고 다른 분들에게도 참고가 되면 좋겠다.
 
 ## 앱 설치
+### Karabinar
+키보드 배열 설정 변경 프로그램
+왼쪽 `command` 키와 왼쪽 `option` 키를 바꿔준다.
+complex modification 탭에서
+```
+Command + Esc to Command + `
+shift + Esc, Tilde to ~
+```
 
 ### Alfred
 새로 설치해도 설정이나 워크플로 등을 동일하게 유지하기 위해, iCloud drive 에 싱크를 걸어준다.
@@ -23,8 +31,6 @@ Syncing : iCloud drive/AlfredApp
 * 위아래 버튼  Ctrl+J, Ctrl+K 로 키 매핑
 * Ctrl+D,Ctrl+R이 Vim 대신 IDE 설정을 따르도록 수정
 
-### iTerm2
-
 ### Atom
 * Vim plugin
 
@@ -36,6 +42,16 @@ Syncing : iCloud drive/AlfredApp
 ### Homebrew
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+M1 mac의 경우는 설치위치가 달라져서 `brew` 를 실행해 봐도 
+```
+zsh: command not found: brew
+```
+가 뜬다.
+.zprofile 또는 .zshrc에 다음과 같이 환경변수를 추가해 주자.
+```
+export "PATH=/opt/homebrew/bin:$PATH"
 ```
 확인
 
@@ -91,3 +107,7 @@ sudo gem install cocoapods
 1. Ctrl space 를 한/영 전환으로 사용하는 단축키 제외
 2. 텍스트 : 맞춤법자동수정 해제, 자동으로 문장을 대문자로 시작 해제
 3. 키보드 탐색을 사용하여 컨트롤 간에 초점 이동
+4. 키입력을 연속으로 할 수 있도록 변경
+```
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
