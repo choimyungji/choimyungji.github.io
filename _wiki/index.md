@@ -13,6 +13,8 @@ regenerate: true
 * [[life]]
 * [[how-to]]
 * [[etc]]
+* [[tip]]
+* [[tool]]
 
 ---
 
