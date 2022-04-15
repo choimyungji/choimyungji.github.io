@@ -17,3 +17,8 @@ MacOS에서
 ```
 Shift + Option + F
 ```
+
+### 단축키 설정하기
+```
+Cmd + K, Cmd + S
+```
