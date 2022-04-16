@@ -24,5 +24,12 @@ tags : linux, bash, zsh
 ```
 백그라운드 프로세스를 다시 포어그라운드로 불러낸다.
 
+### alias
+```
+> alias 단축명령어='명령어'
+ex)
+> alias bejs='bundle exec jekyll serve'
+```
+명령어를 짧게 축약해서 입력할 수 있도록 정의한다. 보통 profile에 포함하여 터미널이 열릴때부터 동작하도록 한다.
 
 
