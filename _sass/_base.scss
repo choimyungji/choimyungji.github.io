@@ -1,16 +1,29 @@
-$text-color: #000000DD;
-$main-font-color: #4D5667;
+:root {
+    --text:#000000DD;
+    --main-font:#4D5667;
+    --background:#ff6
+    --page-background:#ff6;
+}
+  @media (prefers-color-scheme: dark) {
+    :root {
+        --text:#DDDDDD;
+        --main-font:#ddd;
+        --background:#333;
+        --page-background:#333;
+      }
+  }
 
 body {
     margin: 0;
     height: 100%;
     max-width: 43.2rem;
     padding: 2.7rem 1.35rem;
+    background-color: var(--background);
 }
 
 body {
   font: 400 16px;
-  color: $text-color;
+  color: var(--text);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -27,14 +40,14 @@ body, th, td, div, p, li {
 }
 
 p {
-    color: $main-font-color;
+    color: var(--main-font);
     font-family: 'Noto Serif KR', serif;
     font-weight: 400;
     padding-bottom: 0.2rem;
 }
 
 li {
-    color: $main-font-color;
+    color:var(--main-font);
     font-family: 'Noto Sans KR', sans-serif ;
     font-weight: 400;
     padding-bottom: 0.2rem;
@@ -42,12 +55,12 @@ li {
 
 /*- Link -*/
 a {
-	color: $text-color;
+	color: var(--text);
 	text-decoration: none;
-	&:hover,
-	&:focus {
-		color: darken($text-color, 5%);
-	}
+	// &:hover,
+	// &:focus {
+	// 	color: darken(var(--text), 5%);
+	// }
 }
 
 .post-content {
@@ -112,7 +125,7 @@ h1,h2,h3 {
 
 h4,h5,h6 {
     font-weight: normal;
-    color: $main-font-color;
+    color: var(--main-font);
 }
 
 .post-content h1,h2,h3,h4,h5,h6 {

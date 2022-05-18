@@ -86,8 +86,7 @@ table.gsc-search-box {
 }
 
 .page-content {
-    background:#FFFFFF;
-
+    background: var(--page-content)
     img {
         max-width:100%;
     }
@@ -280,7 +279,7 @@ div.search {
 #menu {
   height: 4px;
   width: 24px; 
-  background-color: $text-color;
+  background-color: var(--text);
   margin-top: 8px;
   &:after, &:before {
     content: "";
@@ -288,7 +287,7 @@ div.search {
     position: relative;
     height: 4px;
     width: 24px;
-    background-color: $text-color;
+    background-color:  var(--text);
     transition: all 0.3s ease-in;
   }
   &:before {
@@ -306,7 +305,7 @@ div.search {
        -moz-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
-    background-color: $text-color;
+    background-color:  var(--text);
   }
   &.btn-close:after {
     top: -4px;
@@ -314,7 +313,7 @@ div.search {
        -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
-    background-color: $text-color;
+    background-color:  var(--text);
   }
 }
 
