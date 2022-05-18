@@ -12,12 +12,26 @@
         </script>
     {% endif %}
     {% if site.comment-support == "utterances" %}
+    <div id="light-mode">
         <script src="https://utteranc.es/client.js"
-            repo="{{ site.utterances.repo }}"
-            issue-term="{{ site.utterances.issue-term }}"
-            label="{{ site.utterances.label }}"
-        async>
+        repo="{{ site.utterances.repo }}"
+        issue-term="{{ site.utterances.issue-term }}"
+        label="{{ site.utterances.label }}"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
         </script>
+    </div>
+    <div id="dark-mode">
+        <script src="https://utteranc.es/client.js"
+        repo="{{ site.utterances.repo }}"
+        issue-term="{{ site.utterances.issue-term }}"
+        label="{{ site.utterances.label }}"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+        </script>
+    </div>
     {% endif %}
     </div>
 {% endif %}

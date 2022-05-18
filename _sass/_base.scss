@@ -13,6 +13,24 @@
       }
   }
 
+html[data-theme="dark"] #light-mode {
+    display: none;
+}
+
+html[data-theme="dark"] #dark-mode {
+    display: block;
+}
+
+html #light-mode,
+html[data-theme="light"] #light-mode {
+    display: block;
+}
+
+html #dark-mode,
+html[data-theme="light"] #dark-mode {
+    display: none;
+}
+
 body {
     margin: 0;
     height: 100%;
@@ -84,7 +102,7 @@ code,pre {
 }
 code {
     color: inherit;
-    background-color: #ffffff;
+    background-color: var(--background);
     padding: 1px 3px;
     border-radius: 3px;
 }
