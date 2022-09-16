@@ -1,194 +1,626 @@
-2017-01-30-ideavim-build:
-    type: blog
-    title: 'IdeaVIM 빌드가 안 되는 문제 해결.'
-    summary: '"결론: 삽질 끝에 공식 계정에 물어보고 해결."'
-    parent: null
-    url: /blog/2017/01/30/ideavim-build
-    updated: '2017-01-30 21:22:53 +0900'
-    children: []
-2017-03-12-telegram-bot:
-    type: blog
-    title: '텔레그램 봇 스켈레톤 만들기.'
-    summary: 'node.js, heroku로 만드는 텔레그램 챗봇.'
-    parent: null
-    url: /blog/2017/03/12/telegram-bot
-    updated: '2017-03-12 21:08:16 +0900'
-    children: []
-2017-04-02-jwp-00-prepare:
-    type: blog
-    title: 'Next JWP Study 00'
-    summary: 'NextStep Java Web Programming Study 준비 작업.'
-    parent: null
-    url: /blog/2017/04/02/jwp-00-prepare
-    updated: '2017-04-02 12:15:32 +0900'
-    children: []
-2017-04-03-emacs-start:
-    type: blog
-    title: 'emacs 사용 시작!'
-    summary: '하지만 Vim은 포기하지 않는다.'
-    parent: null
-    url: /blog/2017/04/03/emacs-start
-    updated: '2017-04-03 16:33:24 +0900'
-    children: []
-2017-04-03-jwp-01:
-    type: blog
-    title: 'Next JWP Study 01'
-    summary: '단위 테스트와 리팩토링'
-    parent: null
-    url: /blog/2017/04/05/jwp-01
-    updated: '2017-04-05 21:52:28 +0900'
-    children: []
-2017-04-08-jwp-02:
-    type: blog
-    title: 'Next JWP Study 02'
-    summary: 'HTTP 이해'
-    parent: null
-    url: /blog/2017/04/08/jwp-02
-    updated: '2017-04-08 21:29:47 +0900'
-    children: []
-2017-04-10-jwp-03:
-    type: blog
-    title: 'Next JWP Study 03'
-    summary: '"HTTP 이해: 두 번째 시간"'
-    parent: null
-    url: /blog/2017/04/10/jwp-03
-    updated: '2017-04-10 22:47:18 +0900'
-    children: []
-2017-04-13-jwp-04:
-    type: blog
-    title: 'Next JWP Study 04'
-    summary: '"HTTP 이해: 리팩토링과 AWS 배포"'
-    parent: null
-    url: /blog/2017/04/13/jwp-04
-    updated: '2017-04-13 12:15:32 +0900'
-    children: []
-2017-04-17-jwp-05:
-    type: blog
-    title: 'Next JWP Study 05'
-    summary: 'HTTP 웹 서버와 Servlet'
-    parent: null
-    url: /blog/2017/04/17/jwp-05
-    updated: '2017-04-17 15:20:00 +0900'
-    children: []
-2017-04-20-jwp-06:
-    type: blog
-    title: 'Next JWP Study 06'
-    summary: 'JDBC 라이브러리 구현'
-    parent: null
-    url: /blog/2017/04/22/jwp-06
-    updated: '2017-04-22 23:36:10 +0900'
-    children: []
-2017-04-25-jwp-07:
-    type: blog
-    title: 'Next JWP Study 07'
-    summary: '중간 점검'
-    parent: null
-    url: /blog/2017/04/26/jwp-07
-    updated: '2017-04-26 21:49:43 +0900'
-    children: []
-2017-05-01-jwp-08:
-    type: blog
-    title: 'Next JWP Study 08'
-    summary: 'MVC 프레임워크 3단계 실습'
-    parent: null
-    url: /blog/2017/05/01/jwp-08
-    updated: '2017-05-01 07:33:10 +0900'
-    children: []
-2017-05-04-input-source:
-    type: blog
-    title: 'Vim 사용시 한/영 전환 문제 해결하기'
-    summary: 'hammerspoon으로 해결'
-    parent: null
-    url: /blog/2017/05/04/input-source
-    updated: '2017-05-04 22:05:30 +0900'
-    children: []
-2017-05-09-jwp-09:
-    type: blog
-    title: 'Next JWP Study 09'
-    summary: 'Spring MVC 실습'
-    parent: null
-    url: /blog/2017/05/09/jwp-09
-    updated: '2017-05-09 10:45:58 +0900'
-    children: []
-2017-05-14-jwp-10:
-    type: blog
-    title: 'Next JWP Study 10'
-    summary: 'DI 및 Spring DI'
-    parent: null
-    url: /blog/2017/05/14/jwp-10
-    updated: '2017-05-14 14:10:50 +0900'
-    children: []
-2017-05-16-jwp-11:
-    type: blog
-    title: 'Next JWP Study 11'
-    summary: 'DI 기반 단위 테스트'
-    parent: null
-    url: /blog/2017/05/16/jwp-11
-    updated: '2017-05-16 21:36:06 +0900'
-    children: []
-2017-05-20-jwp-12:
-    type: blog
-    title: 'Next JWP Study 12'
-    summary: 'Spring Boot by Tests'
-    parent: null
-    url: /blog/2017/05/20/jwp-12
-    updated: '2017-05-20 20:44:40 +0900'
-    children: []
-2017-05-23-jwp-13:
-    type: blog
-    title: 'Next JWP Study 13'
-    summary: 'AOP 개념 및 로그인 기반 테스트'
-    parent: null
-    url: /blog/2017/05/23/jwp-13
-    updated: '2017-05-23 22:05:44 +0900'
-    children: []
-2017-05-27-jwp-14:
-    type: blog
-    title: 'Next JWP Study 14'
-    summary: 'ORM 및 Spring Data JPA'
-    parent: null
-    url: /blog/2017/05/27/jwp-14
-    updated: '2017-05-27 18:00:40 +0900'
-    children: []
-2017-05-29-jwp-15:
-    type: blog
-    title: 'Next JWP Study 15'
-    summary: 'RESTful API 설계'
-    parent: null
-    url: /blog/2017/05/29/jwp-15
-    updated: '2017-05-29 19:54:06 +0900'
-    children: []
-2017-06-01-jwp-16:
-    type: blog
-    title: 'Next JWP Study 16'
-    summary: 'Test, OOP 피드백 (끝)'
-    parent: null
-    url: /blog/2017/06/01/jwp-16
-    updated: '2017-06-01 19:52:40 +0900'
-    children: []
-2017-07-09-vim-game-code-break:
-    type: blog
-    title: '레거시 코드를 파괴하는 Vim 벽돌 깨기'
-    summary: '혼돈! 파괴! Vim!'
-    parent: null
-    url: /blog/2017/07/09/vim-game-code-break
-    updated: '2017-07-09 00:15:00 +0900'
-    children: []
-2017-07-14-aheui-explained:
-    type: blog
-    title: '아희 ''Hello, World!''에 코멘트를 달아 보았다.'
-    summary: '아희 재밌네'
-    parent: null
-    url: /blog/2017/07/14/aheui-explained
-    updated: '2017-07-14 23:00:17 +0900'
-    children: []
 2017-08-23-0.30000000000000004:
     type: blog
     title: '0.1 + 0.2 == 0.30000000000000004'
     summary: '자나깨나 부동소수점 조심'
     parent: null
-    url: /blog/2017/08/23/0.30000000000000004
+    url: /posts/2017-08-23-0.30000000000000004
     updated: '2017-08-23 18:15:32 +0900'
+    children: []
+2017-11-14-20171115-til:
+    type: blog
+    title: '"TIL 170913"'
+    summary: null
+    parent: null
+    url: /posts/2017-11-14-20171115-til
+    updated: '2017-11-14 22:13:58 +0900'
+    children: []
+2017-11-14-css:
+    type: blog
+    title: css
+    summary: null
+    parent: null
+    url: /posts/2017-11-14-css
+    updated: '2017-11-14 22:13:58 +0900'
+    children: []
+2017-11-14-fingerprint:
+    type: blog
+    title: '지문인식 SDK 사용하기'
+    summary: null
+    parent: null
+    url: /posts/2017-11-14-fingerprint
+    updated: '2017-11-14 22:13:58 +0900'
+    children: []
+2017-11-14-java-date-dateformat:
+    type: blog
+    title: 'Java Date, DateFormat'
+    summary: null
+    parent: null
+    url: /posts/2017-11-14-java-date-dateformat
+    updated: '2017-11-14 22:13:58 +0900'
+    children: []
+2017-11-14-javascript:
+    type: blog
+    title: javascript
+    summary: null
+    parent: null
+    url: /posts/2017-11-14-javascript
+    updated: '2017-11-14 22:13:58 +0900'
+    children: []
+2017-11-14-jquery:
+    type: blog
+    title: jQuery
+    summary: null
+    parent: null
+    url: /posts/2017-11-14-jquery
+    updated: '2017-11-14 22:13:58 +0900'
+    children: []
+2017-11-14-linear-layout:
+    type: blog
+    title: LinearLayout
+    summary: null
+    parent: null
+    url: /posts/2017-11-14-linear-layout
+    updated: '2017-11-14 22:13:58 +0900'
+    children: []
+2017-11-14-machine-learning-terms:
+    type: blog
+    title: '머신러닝 용어 정리'
+    summary: null
+    parent: null
+    url: /posts/2017-11-14-machine-learning-terms
+    updated: '2017-11-14 22:13:58 +0900'
+    children: []
+2017-11-14-tensorflow-install:
+    type: blog
+    title: '텐서플로 설치'
+    summary: null
+    parent: null
+    url: /posts/2017-11-14-tensorflow-install
+    updated: '2017-11-14 22:13:58 +0900'
+    children: []
+2017-11-14-uncategorized:
+    type: blog
+    title: '정리되지 않은'
+    summary: null
+    parent: null
+    url: /posts/2017-11-14-uncategorized
+    updated: '2017-11-14 22:13:58 +0900'
+    children: []
+2017-11-14-uuid:
+    type: blog
+    title: 'UUID 적용'
+    summary: null
+    parent: null
+    url: /posts/2017-11-14-uuid
+    updated: '2017-11-14 22:13:58 +0900'
+    children: []
+2017-11-15-readme:
+    type: blog
+    title: 'Today I Learned'
+    summary: null
+    parent: null
+    url: /posts/2017-11-15-readme
+    updated: '2017-11-15 00:00:00 +0900'
+    children: []
+2018-07-11-reference-counting:
+    type: blog
+    title: '"Auto Reference Counting"'
+    summary: null
+    parent: null
+    url: /posts/2018-07-11-reference-counting
+    updated: '2018-07-11 16:38:58 +0900'
+    children: []
+2018-07-19-uiview-animate:
+    type: blog
+    title: '"UIView animation"'
+    summary: null
+    parent: null
+    url: /posts/2018-07-19-uiview-animate
+    updated: '2018-07-19 16:38:58 +0900'
+    children: []
+2018-08-19-python-ssl-error:
+    type: blog
+    title: '"Python3 SSL 에러"'
+    summary: null
+    parent: null
+    url: /posts/2018-08-19-python-ssl-error
+    updated: '2018-08-19 21:45:58 +0900'
+    children: []
+2018-09-11-pod-ignore-warnings:
+    type: blog
+    title: 'CocoaPods 경고제거'
+    summary: null
+    parent: null
+    url: /posts/2018-09-11-pod-ignore-warnings
+    updated: '2018-09-11 10:39:58 +0900'
+    children: []
+2018-09-18-git-alias:
+    type: blog
+    title: 'Git Alias'
+    summary: null
+    parent: null
+    url: /posts/2018-09-18-git-alias
+    updated: '2018-09-18 22:00:00 +0900'
+    children: []
+2018-09-18-one-condition-in-forloop:
+    type: blog
+    title: 'for 문 안에 조건이 한개라면'
+    summary: null
+    parent: null
+    url: /posts/2018-09-18-one-condition-in-forloop
+    updated: '2018-09-18 23:25:00 +0900'
+    children: []
+2018-09-20-swift-substring:
+    type: blog
+    title: 'swift String의 substring 쉽게 쓰기'
+    summary: null
+    parent: null
+    url: /posts/2018-09-20-swift-substring
+    updated: '2018-09-20 22:35:00 +0900'
+    children: []
+2018-09-27-simulator-ssl-error:
+    type: blog
+    title: 'iPhone Simulator에서 SSL error'
+    summary: null
+    parent: null
+    url: /posts/2018-09-27-simulator-ssl-error
+    updated: '2018-09-27 23:00:00 +0900'
+    children: []
+2018-10-30-better-refrige-privacy-policy:
+    type: blog
+    title: '더나은냉장고 개인정보처리방침'
+    summary: null
+    parent: null
+    url: /posts/2018-10-30-better-refrige-privacy-policy
+    updated: '2018-10-30 00:00:00 +0900'
+    children: []
+2019-01-01-2018-retrospectives:
+    type: blog
+    title: '2018년 회고'
+    summary: null
+    parent: null
+    url: /posts/2019-01-01-2018-retrospectives
+    updated: '2019-01-01 15:00:00 +0900'
+    children: []
+2019-01-23-vimrc-setting:
+    type: blog
+    title: 'vimrc 설정'
+    summary: null
+    parent: null
+    url: /posts/2019-01-23-vimrc-setting
+    updated: '2019-01-23 10:30:00 +0900'
+    children: []
+2019-01-31-201901-retrospectives:
+    type: blog
+    title: '1월의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2019-01-31-201901-retrospectives
+    updated: '2019-01-31 09:00:00 +0900'
+    children: []
+2019-02-28-201902-retrospectives:
+    type: blog
+    title: '2월의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2019-02-28-201902-retrospectives
+    updated: '2019-02-28 10:00:00 +0900'
+    children: []
+2019-04-01-201903-retrospectives:
+    type: blog
+    title: '3월의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2019-04-01-201903-retrospectives
+    updated: '2019-04-01 22:00:00 +0900'
+    children: []
+2019-06-06-install-macos-catalina-and-ipados:
+    type: blog
+    title: 'macOS Catalina, Xcode11, iPadOS 베타 설치'
+    summary: null
+    parent: null
+    url: /posts/2019-06-06-install-macos-catalina-and-ipados
+    updated: '2019-06-06 20:50:00 +0900'
+    children: []
+2019-07-01-201906-retrospectives:
+    type: blog
+    title: '6월의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2019-07-01-201906-retrospectives
+    updated: '2019-07-01 18:00:00 +0900'
+    children: []
+2019-07-07-201907-retrospectives:
+    type: blog
+    title: '7월의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2019-07-07-201907-retrospectives
+    updated: '2019-07-07 18:00:00 +0900'
+    children: []
+2019-09-04-201908-retrospectives:
+    type: blog
+    title: '8월의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2019-09-04-201908-retrospectives
+    updated: '2019-09-04 17:00:00 +0900'
+    children: []
+2020-01-06-2019-retrospectives:
+    type: blog
+    title: '2019년 회고'
+    summary: null
+    parent: null
+    url: /posts/2020-01-06-2019-retrospectives
+    updated: '2020-01-06 14:40:00 +0900'
+    children: []
+2020-01-14-time-management:
+    type: blog
+    title: '2020 시간관리 대작전'
+    summary: null
+    parent: null
+    url: /posts/2020-01-14-time-management
+    updated: '2020-01-14 10:20:00 +0900'
+    children: []
+2020-02-08-202001-retrospectives:
+    type: blog
+    title: '1월의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2020-02-08-202001-retrospectives
+    updated: '2020-02-08 00:12:00 +0900'
+    children: []
+2020-02-22-setting-mac:
+    type: blog
+    title: '나의 맥 기본 세팅'
+    summary: null
+    parent: null
+    url: /posts/2020-02-22-setting-mac
+    updated: '2020-02-22 00:12:00 +0900'
+    children: []
+2020-02-25-commandlinetools:
+    type: blog
+    title: 'Command Line Tools for Xcode'
+    summary: null
+    parent: null
+    url: /posts/2020-02-25-commandlinetools
+    updated: '2020-02-25 12:00:00 +0900'
+    children: []
+2020-02-25-commandlinetools-tip:
+    type: blog
+    title: 'CommandLineTools 사용 팁'
+    summary: null
+    parent: null
+    url: /posts/2020-02-25-commandlinetools-tip
+    updated: '2020-02-25 12:00:00 +0900'
+    children: []
+2020-02-25-xcode-tip:
+    type: blog
+    title: 'Xcode 사용 팁'
+    summary: null
+    parent: null
+    url: /posts/2020-02-25-xcode-tip
+    updated: '2020-02-25 00:00:00 +0900'
+    children: []
+2020-02-26-gatsby-change-font:
+    type: blog
+    title: 'GatsbyJS에서 Noto Serif KR 사용하기'
+    summary: null
+    parent: null
+    url: /posts/2020-02-26-gatsby-change-font
+    updated: '2020-02-26 00:00:00 +0900'
+    children: []
+2020-02-28-202002-retrospectives:
+    type: blog
+    title: '2월의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2020-02-28-202002-retrospectives
+    updated: '2020-02-28 12:00:00 +0900'
+    children: []
+2020-02-29-atom-tip:
+    type: blog
+    title: 'Atom 사용팁'
+    summary: null
+    parent: null
+    url: /posts/2020-02-29-atom-tip
+    updated: '2020-02-29 09:00:00 +0900'
+    children: []
+2020-03-09-background-location:
+    type: blog
+    title: '백그라운드에서 위치정보 사용하기'
+    summary: null
+    parent: null
+    url: /posts/2020-03-09-background-location
+    updated: '2020-03-09 18:00:00 +0900'
+    children: []
+2020-03-10-start-react-native-app:
+    type: blog
+    title: 'React Native 시작하기'
+    summary: null
+    parent: null
+    url: /posts/2020-03-10-start-react-native-app
+    updated: '2020-03-10 16:00:00 +0900'
+    children: []
+2020-09-01-202008-retrospectives:
+    type: blog
+    title: '8월의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2020-09-01-202008-retrospectives
+    updated: '2020-09-01 22:36:25 +0900'
+    children: []
+2020-09-02-alfred-snippet-for-bear:
+    type: blog
+    title: '베어앱을 위한 알프레드 스니펫'
+    summary: null
+    parent: null
+    url: /posts/2020-09-02-alfred-snippet-for-bear
+    updated: '2020-09-02 23:15:18 +0900'
+    children: []
+2020-09-12-home-financial-review:
+    type: blog
+    title: '가계부리뷰에 대한 회고'
+    summary: null
+    parent: null
+    url: /posts/2020-09-12-home-financial-review
+    updated: '2020-09-12 08:09:28 +0900'
+    children: []
+2020-10-06-202009-retrospectives:
+    type: blog
+    title: '9월의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2020-10-06-202009-retrospectives
+    updated: '2020-10-06 17:12:48 +0900'
+    children: []
+2021-01-11-2020-retrospectives:
+    type: blog
+    title: '2020년의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2021-01-11-2020-retrospectives
+    updated: '2021-01-11 19:31:56 +0900'
+    children: []
+2021-02-16-fork-own-repo:
+    type: blog
+    title: '나의 블로그를 프라이빗 리포지토리에서 머지하기'
+    summary: null
+    parent: null
+    url: /posts/2021-02-16-fork-own-repo
+    updated: '2021-02-16 22:06:27 +0900'
+    children: []
+2021-02-21-spent-more-time-with-family:
+    type: blog
+    title: null
+    summary: null
+    parent: null
+    url: /posts/2021-02-21-spent-more-time-with-family
+    updated: '2021-02-21 19:31:44 +0900'
+    children: []
+2021-05-26-register-birth:
+    type: blog
+    title: null
+    summary: null
+    parent: null
+    url: /posts/2021-05-26-register-birth
+    updated: '2021-05-26 12:47:11 +0900'
+    children: []
+2021-06-15-202105-retospectives:
+    type: blog
+    title: '5월의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2021-06-15-202105-retospectives
+    updated: '2021-06-15 23:40:48 +0900'
+    children: []
+2021-07-11-202106-retrospectives:
+    type: blog
+    title: '6월의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2021-07-11-202106-retrospectives
+    updated: '2021-07-11 22:45:04 +0900'
+    children: []
+2021-08-08-202107-retrospectives:
+    type: blog
+    title: '7월의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2021-08-08-202107-retrospectives
+    updated: '2021-08-08 23:10:04 +0900'
+    children: []
+2022-02-02-2021-retrospectives:
+    type: blog
+    title: '2021년의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2022-02-02-2021-retrospectives
+    updated: '2022-02-02 22:28:28 +0900'
+    children: []
+alertvc-align:
+    type: wiki
+    title: 'UIAlertController의 text를 왼쪽정렬하기'
+    summary: null
+    parent: uikit
+    url: /wiki/alertvc-align
+    updated: '2021-05-21 22:17:06 +0900'
+    children: []
+android:
+    type: wiki
+    title: 'android 개발'
+    summary: 'android 개발 관련 위키의 메인 페이지입니다.'
+    parent: develop
+    url: /wiki/android
+    updated: '2020-09-23 19:54:11 +0900'
+    children: [bitmaptobitearray, databindingutil, kotlin]
+automator:
+    type: wiki
+    title: 오토메이터
+    summary: null
+    parent: tool
+    url: /wiki/automator
+    updated: '2022-02-09 23:19:02 +0900'
+    children: []
+avcapturesession:
+    type: wiki
+    title: AVCaptureSession
+    summary: null
+    parent: '[avfoundation]'
+    url: /wiki/avcapturesession
+    updated: '2021-02-27 22:22:13 +0900'
+    children: []
+avfoundation:
+    type: wiki
+    title: AVFoundation
+    summary: null
+    parent: ios
+    url: /wiki/avfoundation
+    updated: '2021-02-26 14:09:03 +0900'
+    children: []
+bitmaptobitearray:
+    type: wiki
+    title: 'Bitmap을 Byte배열로 전환'
+    summary: null
+    parent: android
+    url: /wiki/bitmaptobitearray
+    updated: '2021-02-14 22:55:59 +0900'
+    children: []
+books:
+    type: wiki
+    title: 독서
+    summary: null
+    parent: life
+    url: /wiki/books
+    updated: '2021-05-22 22:24:43 +0900'
+    children: [developers-writing, give-and-take]
+core-location:
+    type: wiki
+    title: CoreLocation
+    summary: ""
+    parent: ios
+    url: /wiki/core-location
+    updated: '2020-09-11 18:53:44 +0900'
+    children: [gpx]
+coredata-in-framework-ios12:
+    type: wiki
+    title: '코어데이터를 프레임워크에서 사용하기'
+    summary: null
+    parent: ios
+    url: /wiki/coredata-in-framework-ios12
+    updated: '2021-03-04 14:33:18 +0900'
+    children: []
+CTAP:
+    type: wiki
+    title: CTAP
+    summary: null
+    parent: fido
+    url: /wiki/CTAP
+    updated: '2020-07-09 22:00:00 +0900'
+    children: []
+databindingutil:
+    type: wiki
+    title: DataBindingUtil
+    summary: null
+    parent: android
+    url: /wiki/databindingutil
+    updated: '2021-02-24 19:41:10 +0900'
+    children: []
+date-format:
+    type: wiki
+    title: '날짜 시간 표현 형식 문자열'
+    summary: null
+    parent: how-to
+    url: /wiki/date-format
+    updated: '2020-09-04 14:30:00 +0900'
+    children: []
+develop:
+    type: wiki
+    title: Develop
+    summary: '개발 관련 위키의 메인 페이지입니다.'
+    parent: index
+    url: /wiki/develop
+    updated: '2020-09-11 11:58:40 +0900'
+    children: [android, ios, opencv, react-native]
+developers-writing:
+    type: wiki
+    title: '개발자의 글쓰기'
+    summary: null
+    parent: books
+    url: /wiki/developers-writing
+    updated: '2022-05-09 23:43:12 +0900'
+    children: []
+em-rem:
+    type: wiki
+    title: 'em과 rem의 차이'
+    summary: null
+    parent: etc
+    url: /wiki/em-rem
+    updated: '2021-03-08 22:50:06 +0900'
+    children: []
+etc:
+    type: wiki
+    title: ETC
+    summary: null
+    parent: index
+    url: /wiki/etc
+    updated: '2021-02-14 23:33:17 +0900'
+    children: [em-rem, leopold-keyboard, wcdma]
+fido:
+    type: wiki
+    title: FIDO2
+    summary: null
+    parent: how-to
+    url: /wiki/fido
+    updated: '2020-07-09 22:00:00 +0900'
+    children: [CTAP]
+git:
+    type: wiki
+    title: 'Git Command'
+    summary: null
+    parent: how-to
+    url: /wiki/git
+    updated: '2020-11-24 20:34:05 +0900'
+    children: [git-submodule]
+git-submodule:
+    type: wiki
+    title: 'git submodule'
+    summary: null
+    parent: git
+    url: /wiki/git-submodule
+    updated: '2020-11-27 15:58:33 +0900'
+    children: []
+github-organization-email:
+    type: wiki
+    title: 'Github Organization 알림 메일을 별도의 주소로 받기'
+    summary: null
+    parent: how-to
+    url: /wiki/github-organization-email
+    updated: '2021-02-15 17:03:22 +0900'
+    children: []
+give-and-take:
+    type: wiki
+    title: 기브앤테이크
+    summary: null
+    parent: books
+    url: /wiki/give-and-take
+    updated: '2021-05-22 22:25:12 +0900'
+    children: []
+google-search-engine:
+    type: wiki
+    title: '구글 검색 엔진'
+    summary: null
+    parent: how-to
+    url: /wiki/google-search-engine
+    updated: '2020-07-13 14:40:00 +0900'
+    children: []
+gpx:
+    type: wiki
+    title: GPX
+    summary: ""
+    parent: core-location
+    url: /wiki/gpx
+    updated: '2020-09-11 18:53:44 +0900'
     children: []
 how-to:
     type: wiki
@@ -197,7 +629,7 @@ how-to:
     parent: index
     url: /wiki/how-to
     updated: '2018-02-04 15:57:05 +0900'
-    children: [mathjax-latex]
+    children: [date-format, fido, git, github-organization-email, google-search-engine, linux-command, sql, vim]
 index:
     type: wiki
     title: wiki
@@ -206,11 +638,387 @@ index:
     url: /wiki/index
     updated: null
     children: []
-mathjax-latex:
+ios:
     type: wiki
-    title: 'MathJax로 LaTeX 사용하기'
+    title: 'iOS 개발'
+    summary: 'iOS 개발 관련 위키의 메인 페이지입니다.'
+    parent: develop
+    url: /wiki/ios
+    updated: '2020-09-11 12:00:03 +0900'
+    children: [avfoundation, core-location, coredata-in-framework-ios12, ios_library, ios-opencv, mainthreadchecker, module-compiled-with-swift-version-error, swift, swift-package-manager, swiftui, uiimage-crop, uikit, uiviewcontroller, xcode-playground-error]
+ios_library:
+    type: wiki
+    title: 'iOS 라이브러리 구조'
+    summary: null
+    parent: ios
+    url: /wiki/ios_library
+    updated: '2021-04-01 23:10:31 +0900'
+    children: []
+ios-opencv:
+    type: wiki
+    title: 'iOS에서 openCV 사용하기'
+    summary: null
+    parent: ios
+    url: /wiki/ios-opencv
+    updated: '2021-02-25 18:00:32 +0900'
+    children: []
+ios-run-loop:
+    type: wiki
+    title: 'iOS 런루프'
+    summary: null
+    parent: uikit
+    url: /wiki/ios-run-loop
+    updated: '2022-02-20 17:27:13 +0900'
+    children: []
+kotlin:
+    type: wiki
+    title: Kotlin
+    summary: Kotlin
+    parent: android
+    url: /wiki/kotlin
+    updated: '2020-09-23 19:55:05 +0900'
+    children: [kotlin-getter-setter]
+kotlin-getter-setter:
+    type: wiki
+    title: 'Kotlin Getter와 Setter'
+    summary: 'Kotlin getter and setter'
+    parent: kotlin
+    url: /wiki/kotlin-getter-setter
+    updated: '2020-09-23 19:56:26 +0900'
+    children: []
+leopold-keyboard:
+    type: wiki
+    title: 'Leopold 키보드'
+    summary: null
+    parent: etc
+    url: /wiki/leopold-keyboard
+    updated: '2021-02-28 18:33:20 +0900'
+    children: []
+life:
+    type: wiki
+    title: 생활
+    summary: null
+    parent: index
+    url: /wiki/life
+    updated: '2021-05-22 22:22:13 +0900'
+    children: [books]
+linux-command:
+    type: wiki
+    title: '리눅스 명령 정리'
     summary: null
     parent: how-to
-    url: /wiki/mathjax-latex
-    updated: '2019-11-04 22:13:47 +0900'
+    url: /wiki/linux-command
+    updated: '2020-09-06 11:50:00 +0900'
+    children: []
+mac-tip:
+    type: wiki
+    title: 'macOS 사용팁'
+    summary: null
+    parent: tip
+    url: /wiki/mac-tip
+    updated: '2020-07-14 16:55:00 +0900'
+    children: []
+mainthreadchecker:
+    type: wiki
+    title: 'Main Thread Checker'
+    summary: null
+    parent: ios
+    url: /wiki/mainthreadchecker
+    updated: '2021-03-03 18:03:18 +0900'
+    children: []
+module-compiled-with-swift-version-error:
+    type: wiki
+    title: '모듈 스위프트 버전 에러'
+    summary: null
+    parent: ios
+    url: /wiki/module-compiled-with-swift-version-error
+    updated: '2021-02-27 22:17:11 +0900'
+    children: []
+opencv:
+    type: wiki
+    title: OpenCV
+    summary: null
+    parent: develop
+    url: /wiki/opencv
+    updated: '2021-02-25 17:56:39 +0900'
+    children: []
+react-native:
+    type: wiki
+    title: 'React Native 개발'
+    summary: 'React Native 개발 관련 위키의 메인 페이지입니다.'
+    parent: develop
+    url: /wiki/react-native
+    updated: '2021-08-24 00:35:37 +0900'
+    children: [start-react-native, watch-man]
+rxswift:
+    type: wiki
+    title: RxSwift
+    summary: 'RxSwift 관련 위키의 메인 페이지입니다.'
+    parent: RxSwift
+    url: /wiki/rxswift
+    updated: '2022-04-16 23:48:55 +0900'
+    children: [subscribeon-observeon]
+sql:
+    type: wiki
+    title: 'sql 명령 정리'
+    summary: null
+    parent: how-to
+    url: /wiki/sql
+    updated: '2020-08-26 18:00:00 +0900'
+    children: []
+start-react-native:
+    type: wiki
+    title: 'React Native 시작하기'
+    summary: null
+    parent: react-native
+    url: /wiki/start-react-native
+    updated: '2021-08-24 00:40:45 +0900'
+    children: []
+state-managing-property-wrapper:
+    type: wiki
+    title: '상태관리 프로퍼티 래퍼'
+    summary: 'SwiftUI에서 상태관리를 위한 PropertyWrapper'
+    parent: swiftui
+    url: /wiki/state-managing-property-wrapper
+    updated: '2020-09-11 13:50:25 +0900'
+    children: []
+subscribeon-observeon:
+    type: wiki
+    title: 'subscribeOn과 observeOn'
+    summary: null
+    parent: rxswift
+    url: /wiki/subscribeon-observeon
+    updated: '2022-04-16 23:47:18 +0900'
+    children: []
+swift:
+    type: wiki
+    title: Swift
+    summary: 'Swift 관련 위키의 메인 페이지입니다.'
+    parent: ios
+    url: /wiki/swift
+    updated: '2021-08-26 00:01:25 +0900'
+    children: [swift-external-readonly-internal-readwrite, swift-joined]
+swift-external-readonly-internal-readwrite:
+    type: wiki
+    title: '외부에는 readonly 내부적으로는 readwrite'
+    summary: null
+    parent: swift
+    url: /wiki/swift-external-readonly-internal-readwrite
+    updated: '2022-02-09 23:07:24 +0900'
+    children: []
+swift-joined:
+    type: wiki
+    title: joined
+    summary: null
+    parent: swift
+    url: /wiki/swift-joined
+    updated: '2021-08-25 23:38:24 +0900'
+    children: []
+swift-package-manager:
+    type: wiki
+    title: 'Swift Package Manager'
+    summary: 'SwiftPackageManager 관련 위키의 메인 페이지입니다.'
+    parent: ios
+    url: /wiki/swift-package-manager
+    updated: '2020-11-05 21:48:21 +0900'
+    children: []
+swiftui:
+    type: wiki
+    title: SwiftUI
+    summary: 'SwiftUI 관련 위키의 메인 페이지입니다.'
+    parent: ios
+    url: /wiki/swiftui
+    updated: '2020-09-11 12:00:03 +0900'
+    children: [state-managing-property-wrapper, swiftui-list-foreach, swiftui-preview-separated, swiftui-stack, swiftui-textfield, swiftui-view, swiftui-viewdidload]
+swiftui-list-foreach:
+    type: wiki
+    title: 'List와 ForEach'
+    summary: ""
+    parent: swiftui
+    url: /wiki/swiftui-list-foreach
+    updated: '2020-09-11 23:12:37 +0900'
+    children: []
+swiftui-preview-separated:
+    type: wiki
+    title: 'swiftui preview가 여러개로 쪼개져서 보일때'
+    summary: null
+    parent: swiftui
+    url: /wiki/swiftui-preview-separated
+    updated: '2022-04-15 23:23:55 +0900'
+    children: []
+swiftui-stack:
+    type: wiki
+    title: Stack
+    summary: 'SwiftUI Stack'
+    parent: swiftui
+    url: /wiki/swiftui-stack
+    updated: '2020-09-11 13:50:25 +0900'
+    children: []
+swiftui-textfield:
+    type: wiki
+    title: 'SwiftUI Textfield'
+    summary: null
+    parent: swiftui
+    url: /wiki/swiftui-textfield
+    updated: '2022-01-11 00:15:29 +0900'
+    children: []
+swiftui-view:
+    type: wiki
+    title: 'SwiftUI View'
+    summary: ""
+    parent: swiftui
+    url: /wiki/swiftui-view
+    updated: '2020-09-11 23:12:37 +0900'
+    children: []
+swiftui-viewdidload:
+    type: wiki
+    title: 'SwiftUI에서 viewDidLoad는?'
+    summary: ""
+    parent: swiftui
+    url: /wiki/swiftui-viewdidload
+    updated: '2020-11-05 22:53:58 +0900'
+    children: []
+tip:
+    type: wiki
+    title: tip
+    summary: null
+    parent: index
+    url: /wiki/tip
+    updated: '2020-07-14 16:50:00 +0900'
+    children: [mac-tip]
+tool:
+    type: wiki
+    title: tool
+    summary: null
+    parent: index
+    url: /wiki/tool
+    updated: '2020-07-14 11:20:00 +0900'
+    children: [automator, vscode-make-snippets, vscode-shortcut]
+uiimage-cgimage-ciimage:
+    type: wiki
+    title: 'UIImage vs CGImage vs CIImage'
+    summary: null
+    parent: uikit
+    url: /wiki/uiimage-cgimage-ciimage
+    updated: '2021-05-16 21:41:12 +0900'
+    children: []
+uiimage-crop:
+    type: wiki
+    title: 'UIImage crop'
+    summary: null
+    parent: ios
+    url: /wiki/uiimage-crop
+    updated: '2021-03-02 23:37:10 +0900'
+    children: []
+uikit:
+    type: wiki
+    title: UIKit
+    summary: null
+    parent: ios
+    url: /wiki/uikit
+    updated: '2021-05-16 21:55:20 +0900'
+    children: [alertvc-align, ios-run-loop, uiimage-cgimage-ciimage]
+uimodalpresentationstyle:
+    type: wiki
+    title: UIModalPresentationStyle
+    summary: null
+    parent: uiviewcontroller
+    url: /wiki/uimodalpresentationstyle
+    updated: '2021-02-17 21:36:39 +0900'
+    children: []
+uiviewcontroller:
+    type: wiki
+    title: UIViewController
+    summary: null
+    parent: ios
+    url: /wiki/uiviewcontroller
+    updated: '2021-02-17 21:34:36 +0900'
+    children: [uimodalpresentationstyle]
+vim:
+    type: wiki
+    title: vim
+    summary: null
+    parent: how-to
+    url: /wiki/vim
+    updated: '2021-09-08 22:58:56 +0900'
+    children: [vim_netrw, vim-command, vim-plugin, vim-wiki, vimrc]
+vim_netrw:
+    type: wiki
+    title: 'VIM 파일 익스플로러'
+    summary: null
+    parent: vim
+    url: /wiki/vim_netrw
+    updated: '2021-05-15 16:42:00 +0900'
+    children: []
+vim-command:
+    type: wiki
+    title: 'VIM 명령 정리'
+    summary: null
+    parent: vim
+    url: /wiki/vim-command
+    updated: '2022-07-12 23:40:00 +0900'
+    children: []
+vim-plugin:
+    type: wiki
+    title: 'VIM 플러그인'
+    summary: null
+    parent: vim
+    url: /wiki/vim-plugin
+    updated: '2021-09-08 23:16:14 +0900'
+    children: []
+vim-wiki:
+    type: wiki
+    title: 'vim-wiki 사용하기'
+    summary: ""
+    parent: vim
+    url: /wiki/vim-wiki
+    updated: '2021-09-08 23:52:44 +0900'
+    children: []
+vimrc:
+    type: wiki
+    title: vimrc
+    summary: null
+    parent: vim
+    url: /wiki/vimrc
+    updated: '2020-11-25 12:34:27 +0900'
+    children: []
+vscode-make-snippets:
+    type: wiki
+    title: 'vs code 스니펫 만들기'
+    summary: null
+    parent: tool
+    url: /wiki/vscode-make-snippets
+    updated: '2021-02-28 23:22:28 +0900'
+    children: []
+vscode-shortcut:
+    type: wiki
+    title: 'vs code 단축키'
+    summary: null
+    parent: tool
+    url: /wiki/vscode-shortcut
+    updated: '2021-02-28 23:26:10 +0900'
+    children: []
+watch-man:
+    type: wiki
+    title: watchman
+    summary: null
+    parent: react-native
+    url: /wiki/watch-man
+    updated: '2021-08-25 22:47:27 +0900'
+    children: []
+wcdma:
+    type: wiki
+    title: WCDMA
+    summary: null
+    parent: etc
+    url: /wiki/wcdma
+    updated: '2021-02-27 22:05:05 +0900'
+    children: []
+xcode-playground-error:
+    type: wiki
+    title: 'Xcode 플레이그라운드 에러 - Failed to launch process. Failed to attach to stub for playground'
+    summary: null
+    parent: ios
+    url: /wiki/xcode-playground-error
+    updated: '2022-01-19 19:40:59 +0900'
     children: []
