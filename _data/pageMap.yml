@@ -486,6 +486,14 @@ books:
     url: /wiki/books
     updated: '2021-05-22 22:24:43 +0900'
     children: [developers-writing, give-and-take]
+combine-binding:
+    type: wiki
+    title: '컴바인 데이터 바인딩'
+    summary: null
+    parent: swift
+    url: /wiki/combine-binding
+    updated: '2022-09-18 23:23:41 +0900'
+    children: []
 core-location:
     type: wiki
     title: CoreLocation
@@ -789,7 +797,7 @@ swift:
     parent: ios
     url: /wiki/swift
     updated: '2021-08-26 00:01:25 +0900'
-    children: [swift-external-readonly-internal-readwrite, swift-joined]
+    children: [combine-binding, swift-external-readonly-internal-readwrite, swift-joined]
 swift-external-readonly-internal-readwrite:
     type: wiki
     title: '외부에는 readonly 내부적으로는 readwrite'
