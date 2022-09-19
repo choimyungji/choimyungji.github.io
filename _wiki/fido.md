@@ -11,4 +11,4 @@ tags : vim
 ---
 # FIDO 2 
 
-[CTAP](CTAP)
+[CTAP](/wiki/CTAP)
