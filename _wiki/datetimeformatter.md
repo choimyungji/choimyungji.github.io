@@ -26,5 +26,5 @@ dateFormatter.dateFormat = "yyyy-MM-dd"
 return dateFormatter.string(from: date)
 ```
 
-표현하는 형식은 [날짜 시간 표현 형식 문자열](/_wiki/date-format.md) 참고
+표현하는 형식은 [날짜 시간 표현 형식 문자열](/wiki/date-format) 참고
 
