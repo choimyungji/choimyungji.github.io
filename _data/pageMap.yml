@@ -534,6 +534,14 @@ date-format:
     url: /wiki/date-format
     updated: '2020-09-04 14:30:00 +0900'
     children: []
+datetimeformatter:
+    type: wiki
+    title: DateTimeFormatter
+    summary: null
+    parent: swift
+    url: /wiki/datetimeformatter
+    updated: '2022-09-19 21:05:44 +0900'
+    children: []
 develop:
     type: wiki
     title: Develop
@@ -797,7 +805,7 @@ swift:
     parent: ios
     url: /wiki/swift
     updated: '2021-08-26 00:01:25 +0900'
-    children: [combine-binding, swift-external-readonly-internal-readwrite, swift-joined]
+    children: [combine-binding, datetimeformatter, swift-external-readonly-internal-readwrite, swift-joined]
 swift-external-readonly-internal-readwrite:
     type: wiki
     title: '외부에는 readonly 내부적으로는 readwrite'
