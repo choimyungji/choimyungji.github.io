@@ -20,19 +20,19 @@ Error Domain=NSURLErrorDomain Code=-1202 "The certificate for this server is inv
 ```
 
 2. 맥의 '키체인 접근'에 들어가서 AVG의 CA인증서를 받자.
-![01](../img/2018-09-27-simulator-ssl-error/1.png)
+![01](../../img/2018-09-27-simulator-ssl-error/1.png)
 
 3. 오른쪽 버튼을 눌러 내보내기를 선택하고 cer 파일로 저장한다.
-![02](../img/2018-09-27-simulator-ssl-error/2.png)
+![02](../../img/2018-09-27-simulator-ssl-error/2.png)
 
 4. cer 파일을 드래그해서 시뮬레이터에 올리면 설치화면이 뜬다.
-![03](../img/2018-09-27-simulator-ssl-error/3.png)
+![03](../../img/2018-09-27-simulator-ssl-error/3.png)
 
 인스톨하고 다시 앱을 실행해보면 SSL에러가 더이상 발생하지 않는다.
 
 ## iPhone X
 iPhone X의 시뮬레이터에서 위의 방법이 동작하지 않았다. 동일하게 드래그해서 넣으면
 프로파일에 추가된다.
-![04](../img/2018-09-27-simulator-ssl-error/4.png)
+![04](../../img/2018-09-27-simulator-ssl-error/4.png)
 `Settings -> General -> About -> Certificate Trust Settings`에 들어가면 해당 인증서의 full trust 를 활성화할 수 있다.
-![05](../img/2018-09-27-simulator-ssl-error/5.png)
+![05](../../img/2018-09-27-simulator-ssl-error/5.png)
