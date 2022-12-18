@@ -13,7 +13,7 @@ parent: [[tool]]
 ## 스니펫 작성
 
 ```
-Menu > Code > Prefernces > User Snippets
+Menu > Code > Preferences > Configure User Snippets
 ```
 
 에서 파일별, 프로젝트별 또는 글로벌로 스니펫을 추가할 수 있다.

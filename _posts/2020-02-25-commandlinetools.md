@@ -24,6 +24,11 @@ xcode-select -p
 /Applications/Xcode.app/Contents/Developer
 ```
 
+변경하고 싶을땐
+```
+sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+``` 
+
 ### xed
 터미널에서 Xcode를 실행할 수 있는 명령
 ```

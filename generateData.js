@@ -3,6 +3,7 @@
 const YAML = require('yamljs');
 const fs = require('fs');
 const path = './_wiki'
+const PRINT = true;
 const list = [];
 
 getFiles('./_wiki', 'wiki', list);
@@ -87,6 +88,7 @@ dataList.forEach(function(page) {
 });
 
 savePageList(pageMap);
+saveDocumentUrlList(pageMap);
 
 function saveTagMap(tagMap) {
     fs.writeFile("./_data/tagMap.yml", YAML.stringify(tagMap), function(err) {
@@ -139,8 +141,8 @@ function parseInfo(file, info) {
     });
 
     if (file.type === 'blog') {
-        obj.url = '/blog/' + obj.date.replace(/^(\d{4})-(\d{2})-(\d{2}).*$/, '$1/$2/$3/');
-        obj.url += obj.fileName.replace(/^(\d{4}-\d{2}-\d{2}-)?(.*)$/, '$2');
+        obj.url = '/posts/' + obj.fileName;
+        // obj.url += obj.fileName.replace(/^(\d{4}-\d{2}-\d{2}-)?(.*)$/, '$2');
     } else if (file.type === 'wiki') {
         obj.url = '/wiki/' + obj.fileName;
     }
@@ -161,6 +163,26 @@ function isDirectory(path) {
 
 function isMarkdown(fileName) {
     return /\.md$/.test(fileName);
+}
+
+ function saveDocumentUrlList(pageMap) {
+     const urlList = [];
+     for (const page in pageMap) {
+         const data = pageMap[page];
+         urlList.push(data.url);
+     }
+     saveToFile("./data/total-document-url-list.json", JSON.stringify(urlList, null, 1), PRINT);
+ }
+
+ function saveToFile(fileLocation, dataString, isPrintWhenSuccess) {
+    fs.writeFile(fileLocation, dataString, function(err) {
+        if (err) {
+            return console.log(err);
+        }
+        if (isPrintWhenSuccess) {
+            console.log(`The file "${fileLocation}" has been saved.`);
+        }
+    });
 }
 
 function getFiles(path, type, array) {
