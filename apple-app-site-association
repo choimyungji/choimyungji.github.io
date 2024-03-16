@@ -1,4 +1,26 @@
 {    
+    "applinks": {
+        "apps": [],
+        "details": [
+          {
+            "appID": "JVM82SQA75.com.maengji.BetterRefriger",
+            "paths": [
+              "/web/waccount/*",
+              "/web/oauth/*",
+              "/web/signup/*",
+              "NOT /web/wstartup/registration/*",
+              "NOT /web/board/*",
+              "NOT /web/apip/*",
+              "NOT /web/store/payment/*",
+              "NOT /web/wpurchase/reward/*",
+              "NOT /web/wmypage/myfunding/purchase/*",
+              "NOT /web/wterms/*",
+              "NOT /_/*",
+              "NOT /*"
+            ]
+          }
+        ]
+    },
     "appclips": 
     {        
         "apps": ["com.maengji.BetterRefriger.Clip"]    
