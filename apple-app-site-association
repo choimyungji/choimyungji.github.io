@@ -14,9 +14,7 @@
               "NOT /web/store/payment/*",
               "NOT /web/wpurchase/reward/*",
               "NOT /web/wmypage/myfunding/purchase/*",
-              "NOT /web/wterms/*",
-              "NOT /_/*",
-              "NOT /*"
+              "NOT /web/wterms/*"
             ]
           }
         ]
