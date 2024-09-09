@@ -3,18 +3,9 @@
         "apps": [],
         "details": [
           {
-            "appID": "JVM82SQA75.com.maengji.BetterRefriger",
+            "appID": "PN5T77486L.com.markmount.wadiz",
             "paths": [
-              "/web/waccount/*",
-              "/web/oauth/*",
-              "/web/signup/*",
-              "NOT /web/wstartup/registration/*",
-              "NOT /web/board/*",
-              "NOT /web/apip/*",
-              "NOT /web/store/payment/*",
-              "NOT /web/wpurchase/reward/*",
-              "NOT /web/wmypage/myfunding/purchase/*",
-              "NOT /web/wterms/*",
+              "/web/test",
               "NOT /*"
             ]
           }
