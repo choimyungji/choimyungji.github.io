@@ -5,7 +5,7 @@
           {
             "appID": "PN5T77486L.com.markmount.wadiz",
             "paths": [
-              "/web/test",
+              "/web/test/*",
               "NOT /*"
             ]
           }
