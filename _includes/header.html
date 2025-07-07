@@ -58,10 +58,11 @@
     </div>
     <div class="site-right-div">
         <form id='header-search' class="site-right-menu" role="search" method="get" action="/search/">
-            <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text">
+            <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text" id="headerSearchInput" autocomplete="off">
             <!-- <input type="submit" class="searchButton" value="Search"> -->
             <a href="javascript:{}" onClick="document.getElementById('header-search').submit();">Search</a>
         </form>
+        <div id="headerSearchResults" class="header-search-results" style="display: none;"></div>
         <div class="site-right-menu">
             <!-- <a class="site-right-menu" href="/about/">Me</a> -->
             <a href="/about/">Me</a>
@@ -112,4 +113,6 @@
         }
     })();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script src="/js/search.js"></script>
 <script src="/js/main.js"></script>

@@ -12,7 +12,7 @@ getFiles('./_posts', 'blog', list);
 const dataList = list.map(function collectData(file) {
 
     const data = fs.readFileSync(file.path, 'utf8');
-    return parseInfo(file, data.split('---')[1]);
+    return parseInfo(file, data);
 
 }).filter(function removeNullData(row) {
 
@@ -89,6 +89,7 @@ dataList.forEach(function(page) {
 
 savePageList(pageMap);
 saveDocumentUrlList(pageMap);
+saveSearchIndex(dataList);
 
 function saveTagMap(tagMap) {
     fs.writeFile("./_data/tagMap.yml", YAML.stringify(tagMap), function(err) {
@@ -117,7 +118,15 @@ function savePageList(pageMap) {
     });
 }
 
-function parseInfo(file, info) {
+function parseInfo(file, data) {
+    const parts = data.split('---');
+    if (parts.length < 3) {
+        return undefined;
+    }
+    
+    const info = parts[1];
+    const content = parts.slice(2).join('---').trim();
+    
     if (info == null) {
         return undefined;
     }
@@ -151,6 +160,9 @@ function parseInfo(file, info) {
         obj.tag = obj.tag.split(/\s+/);
     }
 
+    // Add content for search indexing
+    obj.content = content.replace(/```[\s\S]*?```/g, '').replace(/`[^`]+`/g, '').replace(/[#*_~]/g, '').trim();
+
     const mtime = fs.statSync(file.path).mtime;
     obj.modified = mtime;
 
@@ -183,6 +195,22 @@ function isMarkdown(fileName) {
             console.log(`The file "${fileLocation}" has been saved.`);
         }
     });
+}
+
+function saveSearchIndex(dataList) {
+    const searchIndex = dataList.map(function(item) {
+        return {
+            title: item.title || item.fileName,
+            content: item.content || '',
+            url: item.url,
+            type: item.type,
+            tags: item.tag || [],
+            summary: item.summary || '',
+            date: item.date || item.updated || item.modified
+        };
+    });
+    
+    saveToFile("./data/search-index.json", JSON.stringify(searchIndex, null, 1), PRINT);
 }
 
 function getFiles(path, type, array) {

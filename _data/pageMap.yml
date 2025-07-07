@@ -350,6 +350,14 @@
     url: /posts/2020-09-02-alfred-snippet-for-bear
     updated: '2020-09-02 23:15:18 +0900'
     children: []
+2020-09-11-leader:
+    type: blog
+    title: null
+    summary: null
+    parent: null
+    url: /posts/2020-09-11-leader
+    updated: '2020-09-11 16:04:45 +0900'
+    children: []
 2020-09-12-home-financial-review:
     type: blog
     title: '가계부리뷰에 대한 회고'
@@ -381,6 +389,14 @@
     parent: null
     url: /posts/2021-02-16-fork-own-repo
     updated: '2021-02-16 22:06:27 +0900'
+    children: []
+2021-02-21-my-father:
+    type: blog
+    title: null
+    summary: null
+    parent: null
+    url: /posts/2021-02-21-my-father
+    updated: '2021-02-21 19:24:44 +0900'
     children: []
 2021-02-21-spent-more-time-with-family:
     type: blog
@@ -429,6 +445,38 @@
     parent: null
     url: /posts/2022-02-02-2021-retrospectives
     updated: '2022-02-02 22:28:28 +0900'
+    children: []
+2023-02-10-2022-retospectives:
+    type: blog
+    title: '2022년의 최명지'
+    summary: null
+    parent: null
+    url: /posts/2023-02-10-2022-retospectives
+    updated: '2023-02-10 19:55:38 +0900'
+    children: []
+2023-02-25-enjoy-when-young:
+    type: blog
+    title: null
+    summary: null
+    parent: null
+    url: /posts/2023-02-25-enjoy-when-young
+    updated: '2023-02-25 10:35:13 +0900'
+    children: []
+2023-06-13-child-sick:
+    type: blog
+    title: null
+    summary: null
+    parent: null
+    url: /posts/2023-06-13-child-sick
+    updated: '2023-06-13 23:48:13 +0900'
+    children: []
+2025-07-06-bettersentence-privacy-policy:
+    type: blog
+    title: 'BetterSentence 개인정보처리방침'
+    summary: null
+    parent: null
+    url: /posts/2025-07-06-bettersentence-privacy-policy
+    updated: '2025-07-06 00:00:00 +0900'
     children: []
 alertvc-align:
     type: wiki
@@ -549,7 +597,7 @@ develop:
     parent: index
     url: /wiki/develop
     updated: '2020-09-11 11:58:40 +0900'
-    children: [android, ios, opencv, react-native]
+    children: [android, ios, opencv, rbenv, react-native]
 developers-writing:
     type: wiki
     title: '개발자의 글쓰기'
@@ -582,6 +630,14 @@ fido:
     url: /wiki/fido
     updated: '2020-07-09 22:00:00 +0900'
     children: [CTAP]
+friendliest:
+    type: wiki
+    title: '다정한 동료가 되기'
+    summary: null
+    parent: ""
+    url: /wiki/friendliest
+    updated: '2024-04-30 23:51:00 +0900'
+    children: []
 git:
     type: wiki
     title: 'Git Command'
@@ -630,6 +686,14 @@ gpx:
     url: /wiki/gpx
     updated: '2020-09-11 18:53:44 +0900'
     children: []
+homebrew:
+    type: wiki
+    title: HomeBrew
+    summary: null
+    parent: mac
+    url: /wiki/homebrew
+    updated: '2022-12-01 22:08:48 +0900'
+    children: []
 how-to:
     type: wiki
     title: 'HOW TO'
@@ -653,7 +717,7 @@ ios:
     parent: develop
     url: /wiki/ios
     updated: '2020-09-11 12:00:03 +0900'
-    children: [avfoundation, core-location, coredata-in-framework-ios12, ios_library, ios-opencv, mainthreadchecker, module-compiled-with-swift-version-error, swift, swift-package-manager, swiftui, uiimage-crop, uikit, uiviewcontroller, xcode-playground-error]
+    children: [avfoundation, core-location, coredata-in-framework-ios12, ios_library, ios-opencv, mainthreadchecker, module-compiled-with-swift-version-error, swift, swift-package-manager, swiftui, tdd, uiimage-crop, uikit, uiviewcontroller, xcode-playground-error]
 ios_library:
     type: wiki
     title: 'iOS 라이브러리 구조'
@@ -749,6 +813,14 @@ opencv:
     parent: develop
     url: /wiki/opencv
     updated: '2021-02-25 17:56:39 +0900'
+    children: []
+rbenv:
+    type: wiki
+    title: rbenv
+    summary: null
+    parent: develop
+    url: /wiki/rbenv
+    updated: '2022-12-01 21:49:35 +0900'
     children: []
 react-native:
     type: wiki
@@ -886,6 +958,14 @@ swiftui-viewdidload:
     url: /wiki/swiftui-viewdidload
     updated: '2020-11-05 22:53:58 +0900'
     children: []
+tdd:
+    type: wiki
+    title: 'ios tdd'
+    summary: null
+    parent: ios
+    url: /wiki/tdd
+    updated: '2022-12-01 22:04:21 +0900'
+    children: [xcode-test-shortcuts]
 tip:
     type: wiki
     title: tip
@@ -1029,4 +1109,12 @@ xcode-playground-error:
     parent: ios
     url: /wiki/xcode-playground-error
     updated: '2022-01-19 19:40:59 +0900'
+    children: []
+xcode-test-shortcuts:
+    type: wiki
+    title: '테스트 단축키'
+    summary: null
+    parent: tdd
+    url: /wiki/xcode-test-shortcuts
+    updated: '2022-12-01 22:06:15 +0900'
     children: []

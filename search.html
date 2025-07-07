@@ -4,17 +4,85 @@ title: Search
 permalink: /search/
 public: true
 ---
- <div id="home-search">
-     <script>
-         (function() {
-             var cx = '010903221190266913573:xjqzsvrfjr0';
-             var gcse = document.createElement('script');
-             gcse.type = 'text/javascript';
-             gcse.async = true;
-             gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-             var s = document.getElementsByTagName('script')[0];
-             s.parentNode.insertBefore(gcse, s);
-         })();
-     </script>
-     <gcse:search linkTarget="_parent" queryParameterName="searchString"></gcse:search>
- </div>
+<div id="search-page">
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="검색하세요" class="search-input">
+        <div id="searchResults" class="search-results-page"></div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get('searchString');
+    
+    // 검색 초기화를 기다린 후 검색 실행
+    if (searchQuery) {
+        document.getElementById('searchInput').value = searchQuery;
+        
+        // 검색 인덱스가 초기화될 때까지 기다림
+        const waitForSearch = setInterval(function() {
+            console.log('Waiting for search initialization...', !!window.fuse, !!window.searchIndex);
+            if (window.fuse && window.searchIndex && window.searchIndex.length > 0) {
+                clearInterval(waitForSearch);
+                console.log('Search initialized, performing search for:', searchQuery);
+                performPageSearch(searchQuery);
+            }
+        }, 100);
+        
+        // 5초 후에도 초기화되지 않으면 에러 메시지 표시
+        setTimeout(function() {
+            if (!window.fuse) {
+                document.getElementById('searchResults').innerHTML = '<div class="no-results">검색 초기화 중 오류가 발생했습니다.</div>';
+            }
+        }, 5000);
+    }
+    
+    document.getElementById('searchInput').addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+            performPageSearch(this.value);
+        }
+    });
+});
+
+function performPageSearch(query) {
+    console.log('Performing search for:', query);
+    if (!query.trim()) return;
+    
+    if (!window.fuse) {
+        console.error('Search not initialized');
+        document.getElementById('searchResults').innerHTML = '<div class="no-results">검색이 초기화되지 않았습니다.</div>';
+        return;
+    }
+    
+    const results = performSearch(query);
+    const resultsContainer = document.getElementById('searchResults');
+    
+    console.log('Search results:', results);
+    
+    if (results.length === 0) {
+        resultsContainer.innerHTML = '<div class="no-results">검색 결과가 없습니다.</div>';
+        return;
+    }
+    
+    resultsContainer.innerHTML = results.map(result => {
+        const item = result.item;
+        const score = Math.round((1 - result.score) * 100);
+        
+        return `
+            <div class="search-result-item">
+                <h3 class="search-result-title">
+                    <a href="${item.url}">${item.title}</a>
+                    <span class="search-result-type">[${item.type}]</span>
+                </h3>
+                <p class="search-result-content">${item.summary || item.content.substring(0, 200) + '...'}</p>
+                <div class="search-result-meta">
+                    <span class="search-result-score">일치도: ${score}%</span>
+                    <span class="search-result-date">${new Date(item.date).toLocaleDateString()}</span>
+                    ${item.tags.length ? `<span class="search-result-tags">태그: ${item.tags.join(', ')}</span>` : ''}
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+</script>
