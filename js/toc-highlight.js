@@ -54,10 +54,27 @@
         return currentHeading;
     }
 
-    document.body.onscroll = function() {
+    /**
+     * 스로틀 함수 - 지정된 시간 내 한 번만 실행
+     */
+    const throttle = (func, limit) => {
+        let inThrottle;
+        return function() {
+            const args = arguments;
+            const context = this;
+            if (!inThrottle) {
+                func.apply(context, args);
+                inThrottle = true;
+                setTimeout(() => inThrottle = false, limit);
+            }
+        }
+    }
+
+    const handleScroll = throttle(function() {
         deActivate();
         const currentHeading = findCurrentHeading(headings);
-        console.log(currentHeading)
         activate(tocMap[currentHeading.id]);
-    }
+    }, 100);
+
+    document.body.onscroll = handleScroll;
 })();

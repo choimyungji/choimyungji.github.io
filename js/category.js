@@ -1,17 +1,17 @@
 (function() {
     function getTarget() {
-        var thisName = document.getElementById('thisName').value;
+        const thisName = document.getElementById('thisName').value;
         return thisName;
     }
 
     function getChildren(data) {
-        var thisName = getTarget();
-        var list = [];
+        const thisName = getTarget();
+        const list = [];
 
         Object.keys(data)
             .forEach(function(key) {
-                var item = data[key];
-                if (item.parent == thisName) {
+                const item = data[key];
+                if (item.parent === thisName) {
                     item.url = '/wiki/'.concat(key);
                     item.updated = item.updated.replace(/(^\d{4}.\d{2}.\d{2}).*/, '$1');
                     list.push(item);
@@ -25,28 +25,55 @@
         return list;
     }
 
-    function getChildrenHTML(list) {
-        var children = '';
-        for (var i = 0; i < list.length; i++) {
-            var url = list[i].url;
-            var title = `<span>${list[i].title}</span>`
-            var date = `<div class="post-meta" style="float: right;">${list[i].updated}</div>`;
-            var summary = (list[i].summary) ? `<div class="post-excerpt"> - ${list[i].summary}</div>` : '';
-            children += `<li><a href="${url}" class="post-link">${title}${date}${summary}</a></li>`;
+    function renderChildren(list) {
+        const container = document.getElementById('document-list');
+        container.textContent = '';
+
+        const ul = document.createElement('ul');
+        ul.className = 'post-list';
+
+        for (let i = 0; i < list.length; i++) {
+            const li = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = list[i].url;
+            link.className = 'post-link';
+
+            const title = document.createElement('span');
+            title.textContent = list[i].title;
+            link.appendChild(title);
+
+            const date = document.createElement('div');
+            date.className = 'post-meta';
+            date.style.cssText = 'float: right;';
+            date.textContent = list[i].updated;
+            link.appendChild(date);
+
+            if (list[i].summary) {
+                const summary = document.createElement('div');
+                summary.className = 'post-excerpt';
+                summary.textContent = ' - ' + list[i].summary;
+                link.appendChild(summary);
+            }
+
+            li.appendChild(link);
+            ul.appendChild(li);
         }
-        return children;
+
+        container.appendChild(ul);
     }
 
-    axios
-        .get('/data/wikilist.json', {})
-        .then(function(resp) {
-            if (resp.data == null) {
+    fetch('/data/wikilist.json')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            if (data == null) {
                 return;
             }
-            var list = getChildren(resp.data);
-            var html = getChildrenHTML(list);
-            document.getElementById('document-list').innerHTML = `<ul class="post-list">${html}</ul>`
-
-            return;
+            const list = getChildren(data);
+            renderChildren(list);
+        })
+        .catch(function() {
+            // Failed to load wiki list
         });
 })();

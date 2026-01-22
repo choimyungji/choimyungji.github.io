@@ -22,9 +22,8 @@ async function initSearch() {
         };
         
         window.fuse = new Fuse(window.searchIndex, options);
-        console.log('Search initialized with', window.searchIndex.length, 'documents');
     } catch (error) {
-        console.error('Failed to initialize search:', error);
+        // Search initialization failed silently
     }
 }
 
@@ -36,30 +35,62 @@ function performSearch(query) {
     return results.slice(0, 10); // Return top 10 results
 }
 
-// Format search results
-function formatSearchResults(results) {
+// Format search results using safe DOM manipulation
+function formatSearchResults(results, container) {
+    container.textContent = '';
+
     if (!results.length) {
-        return '<div class="search-no-results">검색 결과가 없습니다.</div>';
+        const noResults = document.createElement('div');
+        noResults.className = 'search-no-results';
+        noResults.textContent = '검색 결과가 없습니다.';
+        container.appendChild(noResults);
+        return;
     }
-    
-    return results.map(result => {
+
+    results.forEach(result => {
         const item = result.item;
         const score = Math.round((1 - result.score) * 100);
-        
-        return `
-            <div class="search-result-item">
-                <h4 class="search-result-title">
-                    <a href="${item.url}">${item.title}</a>
-                    <span class="search-result-type">[${item.type}]</span>
-                </h4>
-                <p class="search-result-summary">${item.summary || item.content.substring(0, 100) + '...'}</p>
-                <div class="search-result-meta">
-                    <span class="search-result-score">일치도: ${score}%</span>
-                    ${item.tags.length ? `<span class="search-result-tags">${item.tags.join(', ')}</span>` : ''}
-                </div>
-            </div>
-        `;
-    }).join('');
+
+        const resultItem = document.createElement('div');
+        resultItem.className = 'search-result-item';
+
+        const title = document.createElement('h4');
+        title.className = 'search-result-title';
+
+        const link = document.createElement('a');
+        link.href = item.url;
+        link.textContent = item.title;
+        title.appendChild(link);
+
+        const typeSpan = document.createElement('span');
+        typeSpan.className = 'search-result-type';
+        typeSpan.textContent = '[' + item.type + ']';
+        title.appendChild(typeSpan);
+
+        const summary = document.createElement('p');
+        summary.className = 'search-result-summary';
+        summary.textContent = item.summary || item.content.substring(0, 100) + '...';
+
+        const meta = document.createElement('div');
+        meta.className = 'search-result-meta';
+
+        const scoreSpan = document.createElement('span');
+        scoreSpan.className = 'search-result-score';
+        scoreSpan.textContent = '일치도: ' + score + '%';
+        meta.appendChild(scoreSpan);
+
+        if (item.tags && item.tags.length) {
+            const tagsSpan = document.createElement('span');
+            tagsSpan.className = 'search-result-tags';
+            tagsSpan.textContent = item.tags.join(', ');
+            meta.appendChild(tagsSpan);
+        }
+
+        resultItem.appendChild(title);
+        resultItem.appendChild(summary);
+        resultItem.appendChild(meta);
+        container.appendChild(resultItem);
+    });
 }
 
 // Live search functionality
@@ -82,7 +113,7 @@ function setupLiveSearch(inputId, resultsId) {
         
         searchTimeout = setTimeout(() => {
             const results = performSearch(query);
-            searchResults.innerHTML = formatSearchResults(results);
+            formatSearchResults(results, searchResults);
             searchResults.style.display = 'block';
         }, 300);
     });

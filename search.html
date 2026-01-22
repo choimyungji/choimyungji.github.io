@@ -6,6 +6,7 @@ public: true
 ---
 <div id="search-page">
     <div class="search-container">
+        <label for="searchInput" class="visually-hidden">검색</label>
         <input type="text" id="searchInput" placeholder="검색하세요" class="search-input">
         <div id="searchResults" class="search-results-page"></div>
     </div>
@@ -15,29 +16,16 @@ public: true
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = urlParams.get('searchString');
-    
-    // 검색 초기화를 기다린 후 검색 실행
+
     if (searchQuery) {
         document.getElementById('searchInput').value = searchQuery;
-        
-        // 검색 인덱스가 초기화될 때까지 기다림
-        const waitForSearch = setInterval(function() {
-            console.log('Waiting for search initialization...', !!window.fuse, !!window.searchIndex);
-            if (window.fuse && window.searchIndex && window.searchIndex.length > 0) {
-                clearInterval(waitForSearch);
-                console.log('Search initialized, performing search for:', searchQuery);
-                performPageSearch(searchQuery);
-            }
-        }, 100);
-        
-        // 5초 후에도 초기화되지 않으면 에러 메시지 표시
-        setTimeout(function() {
-            if (!window.fuse) {
-                document.getElementById('searchResults').innerHTML = '<div class="no-results">검색 초기화 중 오류가 발생했습니다.</div>';
-            }
-        }, 5000);
+        waitForSearchInit().then(function() {
+            performPageSearch(searchQuery);
+        }).catch(function() {
+            showError('검색 초기화 중 오류가 발생했습니다.');
+        });
     }
-    
+
     document.getElementById('searchInput').addEventListener('keyup', function(event) {
         if (event.key === 'Enter') {
             performPageSearch(this.value);
@@ -45,44 +33,99 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+function waitForSearchInit() {
+    return new Promise(function(resolve, reject) {
+        const maxAttempts = 50;
+        let attempts = 0;
+
+        function check() {
+            if (window.fuse && window.searchIndex && window.searchIndex.length > 0) {
+                resolve();
+            } else if (attempts >= maxAttempts) {
+                reject(new Error('Search initialization timeout'));
+            } else {
+                attempts++;
+                setTimeout(check, 100);
+            }
+        }
+        check();
+    });
+}
+
+function showError(message) {
+    const container = document.getElementById('searchResults');
+    container.textContent = '';
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'no-results';
+    errorDiv.textContent = message;
+    container.appendChild(errorDiv);
+}
+
 function performPageSearch(query) {
-    console.log('Performing search for:', query);
     if (!query.trim()) return;
-    
+
     if (!window.fuse) {
-        console.error('Search not initialized');
-        document.getElementById('searchResults').innerHTML = '<div class="no-results">검색이 초기화되지 않았습니다.</div>';
+        showError('검색이 초기화되지 않았습니다.');
         return;
     }
-    
+
     const results = performSearch(query);
     const resultsContainer = document.getElementById('searchResults');
-    
-    console.log('Search results:', results);
-    
+    resultsContainer.textContent = '';
+
     if (results.length === 0) {
-        resultsContainer.innerHTML = '<div class="no-results">검색 결과가 없습니다.</div>';
+        showError('검색 결과가 없습니다.');
         return;
     }
-    
-    resultsContainer.innerHTML = results.map(result => {
+
+    results.forEach(function(result) {
         const item = result.item;
         const score = Math.round((1 - result.score) * 100);
-        
-        return `
-            <div class="search-result-item">
-                <h3 class="search-result-title">
-                    <a href="${item.url}">${item.title}</a>
-                    <span class="search-result-type">[${item.type}]</span>
-                </h3>
-                <p class="search-result-content">${item.summary || item.content.substring(0, 200) + '...'}</p>
-                <div class="search-result-meta">
-                    <span class="search-result-score">일치도: ${score}%</span>
-                    <span class="search-result-date">${new Date(item.date).toLocaleDateString()}</span>
-                    ${item.tags.length ? `<span class="search-result-tags">태그: ${item.tags.join(', ')}</span>` : ''}
-                </div>
-            </div>
-        `;
-    }).join('');
+
+        const resultItem = document.createElement('div');
+        resultItem.className = 'search-result-item';
+
+        const title = document.createElement('h3');
+        title.className = 'search-result-title';
+
+        const link = document.createElement('a');
+        link.href = item.url;
+        link.textContent = item.title;
+        title.appendChild(link);
+
+        const typeSpan = document.createElement('span');
+        typeSpan.className = 'search-result-type';
+        typeSpan.textContent = '[' + item.type + ']';
+        title.appendChild(typeSpan);
+
+        const content = document.createElement('p');
+        content.className = 'search-result-content';
+        content.textContent = item.summary || item.content.substring(0, 200) + '...';
+
+        const meta = document.createElement('div');
+        meta.className = 'search-result-meta';
+
+        const scoreSpan = document.createElement('span');
+        scoreSpan.className = 'search-result-score';
+        scoreSpan.textContent = '일치도: ' + score + '%';
+        meta.appendChild(scoreSpan);
+
+        const dateSpan = document.createElement('span');
+        dateSpan.className = 'search-result-date';
+        dateSpan.textContent = new Date(item.date).toLocaleDateString();
+        meta.appendChild(dateSpan);
+
+        if (item.tags && item.tags.length) {
+            const tagsSpan = document.createElement('span');
+            tagsSpan.className = 'search-result-tags';
+            tagsSpan.textContent = '태그: ' + item.tags.join(', ');
+            meta.appendChild(tagsSpan);
+        }
+
+        resultItem.appendChild(title);
+        resultItem.appendChild(content);
+        resultItem.appendChild(meta);
+        resultsContainer.appendChild(resultItem);
+    });
 }
 </script>

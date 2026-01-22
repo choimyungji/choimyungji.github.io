@@ -58,6 +58,7 @@
     </div>
     <div class="site-right-div">
         <form id='header-search' class="site-right-menu" role="search" method="get" action="/search/">
+            <label for="headerSearchInput" class="visually-hidden">검색</label>
             <input name="searchString" class="searchInput" placeholder=" 검색하세요" type="text" id="headerSearchInput" autocomplete="off">
             <!-- <input type="submit" class="searchButton" value="Search"> -->
             <a href="javascript:{}" onClick="document.getElementById('header-search').submit();">Search</a>
@@ -83,8 +84,8 @@
                  const num = getRandomInt(0, data.length);
                  window.location.href = data[num];
              })
-         .catch(function(error) {
-             console.log(error);
+         .catch(function() {
+             // Failed to load document list
          });
     }
 
@@ -94,23 +95,23 @@
         return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
     }
 
-    ; (function () {
-        var isCtrl = false;
+    (function () {
+        let isCtrl = false;
 
         document.onkeyup = function (e) {
-            if (e.which == 17) {
+            if (e.which === 17) {
                 isCtrl = false;
             }
-        }
+        };
 
         document.onkeydown = function (e) {
-            if (e.which == 17) {
+            if (e.which === 17) {
                 isCtrl = true;
             }
-            if (e.which == 82 && isCtrl == true) {
+            if (e.which === 82 && isCtrl === true) {
                 goToRandomDocument();
             }
-        }
+        };
     })();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>

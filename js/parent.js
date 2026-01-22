@@ -1,22 +1,22 @@
 (function() {
     function getTarget() {
-        var thisName = document.getElementById('thisName').value;
+        const thisName = document.getElementById('thisName').value;
         return encodeURI(thisName);
     }
 
     function walkParents(data) {
-        var plist = [];
-        var target = getTarget();
+        const plist = [];
+        let target = getTarget();
 
-        for (var i = 0; i < 100; i++) {
-            if (target == 'index') {
+        for (let i = 0; i < 100; i++) {
+            if (target === 'index') {
                 break;
             }
-            var next = data[target];
+            const next = data[target];
             if (!next || !next['parent'] || next['parent'].length < 1) {
                 break;
             }
-            next['url'] = '/wiki/'.concat(target)
+            next['url'] = '/wiki/'.concat(target);
             plist.unshift(next);
             target = encodeURI(next['parent']);
         }
@@ -25,28 +25,43 @@
         return plist;
     }
 
-    function makeHTML(plist) {
+    function renderParentList(plist) {
+        const container = document.getElementById('parent-list');
+        container.textContent = '';
+
         if (plist == null || plist.length < 1) {
-            return "";
+            return;
         }
-        var pr = "상위 문서: "
-        for (var i = 0; i < plist.length; i++) {
-            pr += `<a href="${plist[i].url}">${plist[i].title}</a>`;
+
+        const prefix = document.createTextNode('상위 문서: ');
+        container.appendChild(prefix);
+
+        for (let i = 0; i < plist.length; i++) {
+            const link = document.createElement('a');
+            link.href = plist[i].url;
+            link.textContent = plist[i].title;
+            container.appendChild(link);
+
             if (i < plist.length - 1) {
-                pr += `<span> - </span>`;
+                const separator = document.createElement('span');
+                separator.textContent = ' - ';
+                container.appendChild(separator);
             }
         }
-        return pr;
     }
 
-    axios.get('/data/wikilist.json', {})
-        .then(function(resp) {
-            if (resp.data == null) {
+    fetch('/data/wikilist.json')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            if (data == null) {
                 return;
             }
-            var plist = walkParents(resp.data);
-            document.getElementById('parent-list').innerHTML = makeHTML(plist);
-
-            return;
+            const plist = walkParents(data);
+            renderParentList(plist);
+        })
+        .catch(function() {
+            // Failed to load wiki list
         });
 })();
